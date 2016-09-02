@@ -12,9 +12,8 @@ class SectionElementTest extends SapphireTest
      */
     public function testGetCMSFields()
     {
-        $object = $this->objFromFixture('AccordionPanel', 'one');
+        $object = $this->objFromFixture('SectionElement', 'one');
         $fields = $object->getCMSFields();
         $this->assertInstanceOf('FieldList', $fields);
-        $this->assertNotNull($fields->dataFieldByName('Panels'));
     }
 }
