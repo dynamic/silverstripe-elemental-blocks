@@ -12,7 +12,7 @@ class AccordionElementTest extends SapphireTest
      */
     public function testGetCMSFields()
     {
-        $object = $this->objFromFixture('AccordionPanel', 'one');
+        $object = $this->objFromFixture('AccordionElement', 'one');
         $fields = $object->getCMSFields();
         $this->assertInstanceOf('FieldList', $fields);
         $this->assertNotNull($fields->dataFieldByName('Panels'));
