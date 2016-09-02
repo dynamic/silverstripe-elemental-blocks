@@ -1,0 +1,42 @@
+{
+  "name": "dynamic-elements",
+  "version": "1.0.0",
+  "description": "addon elements for Elemental",
+  "main": "./public/src/main.js",
+  "license": "BSD-3-Clause",
+  "author": "Dynamic, Inc",
+  "contributors": [
+    {
+      "name": "Dynamic, Inc",
+      "email": "dev@dy.ag"
+    }
+  ],
+  "engines": {
+    "node": "^4.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.4.0",
+    "babel-jest": "^6.0.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4",
+    "jest-cli": "^0.8.2",
+    "semver": "^5.0.3",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "build": "gulp",
+    "test": "jest"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "testDirectoryName": "tests/javascript"
+  }
+}
