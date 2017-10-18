@@ -9,7 +9,7 @@ class SectionElementTest extends SapphireTest
     /**
      * @var string
      */
-    protected static $fixture_file = 'dynamic-elements/tests/Fixtures.yml';
+    protected static $fixture_file = 'fixtures.yml';
 
     /**
      *
