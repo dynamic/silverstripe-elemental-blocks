@@ -15,13 +15,6 @@ class AccordionElementTest extends SapphireTest
     protected static $fixture_file = 'fixtures.yml';
 
     /**
-     * @var array
-     */
-    protected static $extra_dataobjects = [
-        TestPage::class,
-    ];
-
-    /**
      *
      */
     public function testGetCMSFields()
