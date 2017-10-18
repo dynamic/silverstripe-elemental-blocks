@@ -4,6 +4,7 @@ namespace Dynamic\Elements\Tests;
 
 use Dynamic\Elements\Elements\SectionElement;
 use SilverStripe\Dev\SapphireTest;
+use SilverStripe\Forms\FieldList;
 
 class SectionElementTest extends SapphireTest
 {
@@ -19,6 +20,6 @@ class SectionElementTest extends SapphireTest
     {
         $object = $this->objFromFixture(SectionElement::class, 'one');
         $fields = $object->getCMSFields();
-        $this->assertInstanceOf('FieldList', $fields);
+        $this->assertInstanceOf(FieldList::class, $fields);
     }
 }
