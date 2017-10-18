@@ -26,7 +26,7 @@
             "Dynamic\\DynamicElements\\": "src/",
             "Dynamic\\DynamicElements\\Tests\\": "tests/"
         }
-    },,
+    },
     "config": {
         "process-timeout": 600
     },
