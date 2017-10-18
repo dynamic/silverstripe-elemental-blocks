@@ -1,9 +1,9 @@
 <?php
 
-namespace Dynamic\PageBuildr\Elements;
+namespace Dynamic\Elements\Elements;
 
 use DNADesign\Elemental\Models\BaseElement;
-use Dynamic\PageBuildr\ORM\PromoObject;
+use Dynamic\Elements\Model\PromoObject;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;

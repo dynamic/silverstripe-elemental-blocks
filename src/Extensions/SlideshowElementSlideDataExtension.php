@@ -1,8 +1,8 @@
 <?php
 
-namespace Dynamic\PageBuildr\ORM;
+namespace Dynamic\Elements\ORM;
 
-use Dynamic\PageBuildr\Elements\SlideshowElement;
+use Dynamic\Elements\Elements\SlideshowElement;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataExtension;
 

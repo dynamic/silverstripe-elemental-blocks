@@ -1,6 +1,6 @@
 <?php
 
-namespace Dynamic\PageBuildr\Tests;
+namespace Dynamic\Elements\Tests;
 
 use Dynamic\FlexSlider\Model\SlideImage;
 use SilverStripe\Dev\SapphireTest;

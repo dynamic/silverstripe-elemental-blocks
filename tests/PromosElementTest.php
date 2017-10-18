@@ -1,8 +1,8 @@
 <?php
 
-namespace Dynamic\PageBuildr\Tests;
+namespace Dynamic\Elements\Tests;
 
-use Dynamic\PageBuildr\Elements\PromosElement;
+use Dynamic\Elements\Elements\PromosElement;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataList;

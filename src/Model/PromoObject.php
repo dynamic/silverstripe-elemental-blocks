@@ -1,8 +1,8 @@
 <?php
 
-namespace Dynamic\PageBuildr\ORM;
+namespace Dynamic\Elements\Model;
 
-use Dynamic\PageBuildr\Elements\PromosElement;
+use Dynamic\Elements\Elements\PromosElement;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;

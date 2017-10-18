@@ -1,6 +1,6 @@
 <?php
 
-namespace Dynamic\PageBuildr\Elements;
+namespace Dynamic\Elements\Elements;
 
 use DNADesign\Elemental\Models\BaseElement;
 
@@ -16,5 +16,8 @@ class SlideshowElement extends BaseElement
      */
     private static $plural_name = 'Slideshow Elements';
 
+    /**
+     * @var string
+     */
     private static $title = 'SlideShow Element';
 }

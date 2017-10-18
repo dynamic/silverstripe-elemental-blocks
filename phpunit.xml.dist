@@ -1,0 +1,14 @@
+<phpunit bootstrap="vendor/silverstripe/cms/tests/bootstrap.php" colors="true">
+    <testsuite name="dynamic-elements">
+        <directory>dynamic-elements/tests</directory>
+    </testsuite>
+
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">dynamic-elements/src/</directory>
+            <exclude>
+                <directory suffix=".php">dynamic-elements/tests/</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

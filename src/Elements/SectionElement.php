@@ -1,5 +1,7 @@
 <?php
 
+namespace Dynamic\Elements\Elements;
+
 class SectionElement extends DynamicBaseElement
 {
     /**

@@ -1,5 +1,14 @@
 <?php
 
+namespace Dynamic\Elements\Model;
+
+use Dynamic\Elements\Elements\AccordionElement;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Assets\Image;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\ORM\DataObject;
+use SilverStripe\ORM\ValidationResult;
+
 class AccordionPanel extends DataObject
 {
     /**
@@ -17,23 +26,26 @@ class AccordionPanel extends DataObject
      */
     private static $description = 'A panel for a Accordion widget';
 
+    /**
+     * @var array
+     */
     private static $db = array(
         'Title' => 'Varchar(255)',
         'Content' => 'HTMLText',
-        'SortOrder' => 'Int',
+        'Sort' => 'Int',
     );
     /**
      * @var array
      */
     private static $has_one = array(
-        'Accordion' => 'AccordionElement',
-        'Image' => 'Image',
+        'Accordion' => AccordionElement::class,
+        'Image' => Image::class,
     );
 
     /**
      * @var string
      */
-    private static $default_sort = 'SortOrder';
+    private static $default_sort = 'Sort';
 
     /**
      * @return FieldList
@@ -49,7 +61,7 @@ class AccordionPanel extends DataObject
 
         $fields->addFieldToTab(
             'Root.Main',
-            ImageUploadField::create('Image')
+            UploadField::create('Image')
                 ->setFolderName('Uploads/Elements/Accordions'),
             'Content'
         );
@@ -65,7 +77,7 @@ class AccordionPanel extends DataObject
         $result = parent::validate();
 
         if (!$this->Name || !$this->Content) {
-            $result->error('Both Title and Content are required');
+            $result->addError('Both Title and Content are required');
         }
 
         return $result;
@@ -76,7 +88,7 @@ class AccordionPanel extends DataObject
      *
      * @return bool
      */
-    public function canCreate($member = null)
+    public function canCreate($member = null, $context = [])
     {
         return true;
     }
@@ -86,7 +98,7 @@ class AccordionPanel extends DataObject
      *
      * @return bool
      */
-    public function canView($member = null)
+    public function canView($member = null, $context = [])
     {
         return true;
     }
@@ -96,7 +108,7 @@ class AccordionPanel extends DataObject
      *
      * @return bool
      */
-    public function canEdit($member = null)
+    public function canEdit($member = null, $context = [])
     {
         return true;
     }
@@ -106,7 +118,7 @@ class AccordionPanel extends DataObject
      *
      * @return bool
      */
-    public function canDelete($member = null)
+    public function canDelete($member = null, $context = [])
     {
         return true;
     }

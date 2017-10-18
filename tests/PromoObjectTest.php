@@ -1,9 +1,9 @@
 <?php
 
-namespace Dynamic\PageBuildr\Tests;
+namespace Dynamic\Elements\Tests;
 
 use Dynamic\FlexSlider\Tests\TestPage;
-use Dynamic\PageBuildr\ORM\PromoObject;
+use Dynamic\Elements\ORM\PromoObject;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Security\Member;

@@ -1,5 +1,11 @@
 <?php
 
+namespace Dynamic\Elements\Elements;
+
+use DNADesign\Elemental\Models\BaseElement;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\TextField;
+
 class DynamicBaseElement extends BaseElement
 {
     private static $db = array(
@@ -13,7 +19,7 @@ class DynamicBaseElement extends BaseElement
 
         $fields->addFieldsToTab('Root.Main', array(
             TextField::create('Headline'),
-            HtmlEditorField::create('Content')
+            HTMLEditorField::create('Content')
         ));
 
         return $fields;
@@ -48,7 +54,7 @@ class DynamicBaseElement extends BaseElement
      *
      * @return bool
      */
-    public function canCreate($member = null)
+    public function canCreate($member = null, $context = [])
     {
         return true;
     }
@@ -58,7 +64,7 @@ class DynamicBaseElement extends BaseElement
      *
      * @return bool
      */
-    public function canView($member = null)
+    public function canView($member = null, $context = [])
     {
         return true;
     }
@@ -68,7 +74,7 @@ class DynamicBaseElement extends BaseElement
      *
      * @return bool
      */
-    public function canEdit($member = null)
+    public function canEdit($member = null, $context = [])
     {
         return true;
     }
@@ -78,7 +84,7 @@ class DynamicBaseElement extends BaseElement
      *
      * @return bool
      */
-    public function canDelete($member = null)
+    public function canDelete($member = null, $context = [])
     {
         return true;
     }

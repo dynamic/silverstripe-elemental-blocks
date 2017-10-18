@@ -1,5 +1,9 @@
 <?php
 
+namespace Dynamic\Elements\Tests;
+
+use SilverStripe\Dev\SapphireTest;
+
 class DynamicBaseElementTest extends SapphireTest
 {
     /**
