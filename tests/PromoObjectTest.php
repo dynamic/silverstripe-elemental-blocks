@@ -3,7 +3,7 @@
 namespace Dynamic\Elements\Tests;
 
 use Dynamic\FlexSlider\Tests\TestPage;
-use Dynamic\Elements\ORM\PromoObject;
+use Dynamic\Elements\Model\PromoObject;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Security\Member;

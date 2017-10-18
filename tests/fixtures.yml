@@ -8,22 +8,6 @@ SilverStripe\Security\Permission:
     Code: ADMIN
     Type: 1
     Group: =>SilverStripe\Security\Group.administrators
-  contact:
-    Code: Contact_CRUD
-    Type: 1
-    Group: =>SilverStripe\Security\Group.site-owners
-  home:
-    Code: HomePage_CRUD
-    Type: 1
-    Group: =>SilverStripe\Security\Group.site-owners
-  search:
-    Code: SearchPage_CRUD
-    Type: 1
-    Group: =>SilverStripe\Security\Group.site-owners
-  social:
-    Code: Social_CRUD
-    Type: 1
-    Group: =>SilverStripe\Security\Group.site-owners
 SilverStripe\Security\Member:
   admin:
     FirstName: "Default"
