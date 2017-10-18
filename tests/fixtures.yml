@@ -1,0 +1,62 @@
+SilverStripe\Security\Group:
+  administrators:
+    Title: "Administrators"
+  site-owners:
+    Title: "Site Owners"
+SilverStripe\Security\Permission:
+  administrators:
+    Code: ADMIN
+    Type: 1
+    Group: =>SilverStripe\Security\Group.administrators
+SilverStripe\Security\Member:
+  admin:
+    FirstName: "Default"
+    Surname: "Admin"
+    Email: "defaultadmin"
+    Password: "dev"
+    Groups: =>SilverStripe\Security\Group.administrators
+  site-owner:
+    FirstName: "Site"
+    Surname: "Owner"
+    Email: "owner"
+    Password: "owner"
+    Groups: =>SilverStripe\Security\Group.site-owners
+  default:
+    FirstName: "Default"
+    Surname: "Member"
+    Email: "user"
+    Password: "user"
+Dynamic\Elements\Elements\DynamicBaseElement:
+  default:
+    Title: "Base Element"
+Dynamic\Elements\Model\AccordionPanel:
+  one:
+    Name: "Panel One"
+    Title: "Panel One"
+    Content: "<p>Hello World</p>"
+  two:
+    Name: "Panel Two"
+    Title: "Panel Two"
+    Content: "<p>How are ya?</p>"
+Dynamic\Elements\Elements\AccordionElement:
+  one:
+    Title: "Accordion"
+    Headline: "Biography sub-head"
+    Content: "<p>Biography overview lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>"
+    Panels: =>Dynamic\Elements\Model\AccordionPanel.one, =>Dynamic\Elements\Model\AccordionPanel.two
+Dynamic\Elements\Elements\SectionElement:
+  one:
+    Title: "Intro"
+    Content: "<p>Page introduction lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>"
+Dynamic\Elements\Model\PromoObject:
+  one:
+    Title: "Promo One"
+  two:
+    Title: "Promo Two"
+Dynamic\Elements\Elements\PromosElement:
+  one:
+    Title: "Promos Element One"
+    Promos: =>Dynamic\Elements\Model\PromoObject.one, =>Dynamic\Elements\Model\PromoObject.two
+Dynamic\FlexSlider\Model\SlideImage:
+  default:
+    Name: "Slide One"

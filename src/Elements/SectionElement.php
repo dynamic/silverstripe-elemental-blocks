@@ -1,5 +1,11 @@
 <?php
 
+namespace Dynamic\Elements\Elements;
+
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Assets\Image;
+use SilverStripe\Forms\FieldList;
+
 class SectionElement extends DynamicBaseElement
 {
     /**
@@ -21,7 +27,7 @@ class SectionElement extends DynamicBaseElement
      * @var array
      */
     private static $has_one = array(
-        'Image' => 'Image',
+        'Image' => Image::class,
     );
 
     /**
@@ -31,7 +37,7 @@ class SectionElement extends DynamicBaseElement
     {
         $fields = parent::getCMSFields();
 
-        $ImageField = ImageUploadField::create('Image', 'Image')
+        $ImageField = UploadField::create('Image', 'Image')
             ->setFolderName('Uploads/Elements/Sections');
 
         $fields->insertBefore($ImageField, 'Content');

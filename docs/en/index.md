@@ -1,5 +1,5 @@
 # dynamic-elements
 
-addon elements for Elemental
+Custom elements that work with SilverStripe Elemental module
 
 ## Getting started

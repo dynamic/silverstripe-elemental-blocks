@@ -2,11 +2,11 @@
 
 namespace Dynamic\Elements\Tests;
 
-use Dynamic\Elements\Elements\SectionElement;
+use Dynamic\FlexSlider\Model\SlideImage;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
 
-class SectionElementTest extends SapphireTest
+class SlideshowElementSlideImageDataExtensionTest extends SapphireTest
 {
     /**
      * @var string
@@ -18,8 +18,9 @@ class SectionElementTest extends SapphireTest
      */
     public function testGetCMSFields()
     {
-        $object = $this->objFromFixture(SectionElement::class, 'one');
+        $object = $this->objFromFixture(SlideImage::class, 'default');
         $fields = $object->getCMSFields();
         $this->assertInstanceOf(FieldList::class, $fields);
+        $this->assertNull($fields->dataFieldByName('SlideshowElementID'));
     }
 }
