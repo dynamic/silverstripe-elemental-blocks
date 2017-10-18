@@ -48,13 +48,6 @@ Dynamic\Elements\Elements\SectionElement:
   one:
     Title: "Intro"
     Content: "<p>Page introduction lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>"
-DNADesign\Elemental\Models\ElementalArea:
-  one:
-    Elements: =>Dynamic\Elements\Elements\SectionElement.one, =>Dynamic\Elements\Elements\AccordionElement.one
-Page:
-  default:
-    Title: "Test Page"
-    ElementAreaID: =>DNADesign\Elemental\Models\ElementalArea.one
 Dynamic\Elements\Model\PromoObject:
   one:
     Title: "Promo One"
@@ -67,6 +60,3 @@ Dynamic\Elements\Elements\PromosElement:
 Dynamic\FlexSlider\Model\SlideImage:
   default:
     Name: "Slide One"
-Dynamic\FlexSlider\Tests\TestPage:
-  default:
-    Title: "FlexSlider Test"
