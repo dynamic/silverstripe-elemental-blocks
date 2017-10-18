@@ -23,8 +23,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Dynamic\\DynamicElements\\": "src/",
-            "Dynamic\\DynamicElements\\Tests\\": "tests/"
+            "Dynamic\\Elements\\": "src/",
+            "Dynamic\\Elements\\Tests\\": "tests/"
         }
     },
     "config": {

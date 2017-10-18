@@ -67,3 +67,6 @@ Dynamic\Elements\Elements\PromosElement:
 Dynamic\FlexSlider\Model\SlideImage:
   default:
     Name: "Slide One"
+Dynamic\FlexSlider\Tests\TestPage:
+  default:
+    Title: "FlexSlider Test"
