@@ -1,0 +1,47 @@
+Group:
+  administrators:
+    Title: Administrators
+Permission:
+  administrators:
+    Code: ADMIN
+    Type: 1
+    Group: =>Group.administrators
+Member:
+  admin:
+    FirstName: Default
+    Surname: Admin
+    Email: admin2
+    Groups: =>Group.administrators
+  default:
+    FirstName: Default
+    Surname: Member
+    Email: user
+DynamicBaseElement:
+  default:
+    Title: "Base Element"
+AccordionPanel:
+  one:
+    Name: "Panel One"
+    Title: "Panel One"
+    Content: "<p>Hello World</p>"
+  two:
+    Name: "Panel Two"
+    Title: "Panel Two"
+    Content: "<p>How are ya?</p>"
+AccordionElement:
+  one:
+    Title: "Accordion"
+    Headline: "Biography sub-head"
+    Content: "<p>Biography overview lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>"
+    Panels: =>AccordionPanel.one,=>AccordionPanel.two
+SectionElement:
+  one:
+    Title: "Intro"
+    Content: "<p>Page introduction lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>"
+ElementalArea:
+  one:
+    Widgets: =>SectionElement.one,=>AccordionElement.one
+Page:
+  default:
+    Title: "Test Page"
+    ElementAreaID: =>ElementalArea.one
