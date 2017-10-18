@@ -8,11 +8,17 @@ use SilverStripe\Forms\TextField;
 
 class DynamicBaseElement extends BaseElement
 {
+    /**
+     * @var array
+     */
     private static $db = array(
         'Headline' => 'Varchar(255)',
         'Content' => 'HTMLText',
     );
 
+    /**
+     * @return \SilverStripe\Forms\FieldList
+     */
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
