@@ -2,7 +2,7 @@
 
 namespace Dynamic\Elements\Model;
 
-use Dynamic\Elements\Elements\AccordionElement;
+use Dynamic\Elements\Elements\ElementAccordion;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
@@ -38,7 +38,7 @@ class AccordionPanel extends DataObject
      * @var array
      */
     private static $has_one = array(
-        'Accordion' => AccordionElement::class,
+        'Accordion' => ElementAccordion::class,
         'Image' => Image::class,
     );
 
@@ -55,7 +55,7 @@ class AccordionPanel extends DataObject
         $fields = parent::getCMSFields();
 
         $fields->removeByName(array(
-            'SortOrder',
+            'Sort',
             'AccordionID',
         ));
 
@@ -76,7 +76,7 @@ class AccordionPanel extends DataObject
     {
         $result = parent::validate();
 
-        if (!$this->Name || !$this->Content) {
+        if (!$this->Title || !$this->Content) {
             $result->addError('Both Title and Content are required');
         }
 
