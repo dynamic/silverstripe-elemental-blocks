@@ -2,12 +2,12 @@
 
 namespace Dynamic\Elements\Tests;
 
-use Dynamic\Elements\Elements\PromosElement;
+use Dynamic\Elements\Elements\ElementPromos;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataList;
 
-class PromosElementTest extends SapphireTest
+class ElementPromosTest extends SapphireTest
 {
     /**
      * @var string
@@ -22,7 +22,7 @@ class PromosElementTest extends SapphireTest
      */
     public function testGetCMSFields()
     {
-        $object = $this->objFromFixture(PromosElement::class, 'one');
+        $object = $this->objFromFixture(ElementPromos::class, 'one');
         $fields = $object->getCMSFields();
         $this->assertInstanceOf(FieldList::class, $fields);
         $this->assertNotNull($fields->dataFieldByName('Promos'));
@@ -33,8 +33,8 @@ class PromosElementTest extends SapphireTest
      */
     public function testGetPromoList()
     {
-        $object = $this->objFromFixture(PromosElement::class, 'one');
+        $object = $this->objFromFixture(ElementPromos::class, 'one');
         $this->assertInstanceOf(DataList::class, $object->getPromoList());
-        $this->assertEquals($object->getPromoList(), $object->Promos()->sort('SortOrder'));
+        $this->assertEquals($object->getPromoList(), $object->Promos()->sort('Sort'));
     }
 }

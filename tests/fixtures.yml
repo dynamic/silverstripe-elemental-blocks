@@ -38,13 +38,13 @@ Dynamic\Elements\Model\AccordionPanel:
     Name: "Panel Two"
     Title: "Panel Two"
     Content: "<p>How are ya?</p>"
-Dynamic\Elements\Elements\AccordionElement:
+Dynamic\Elements\Elements\ElementAccordion:
   one:
     Title: "Accordion"
     Headline: "Biography sub-head"
     Content: "<p>Biography overview lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>"
     Panels: =>Dynamic\Elements\Model\AccordionPanel.one, =>Dynamic\Elements\Model\AccordionPanel.two
-Dynamic\Elements\Elements\SectionElement:
+Dynamic\Elements\Elements\ElementFeatures:
   one:
     Title: "Intro"
     Content: "<p>Page introduction lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>"
@@ -53,7 +53,7 @@ Dynamic\Elements\Model\PromoObject:
     Title: "Promo One"
   two:
     Title: "Promo Two"
-Dynamic\Elements\Elements\PromosElement:
+Dynamic\Elements\Elements\ElementPromos:
   one:
     Title: "Promos Element One"
     Promos: =>Dynamic\Elements\Model\PromoObject.one, =>Dynamic\Elements\Model\PromoObject.two

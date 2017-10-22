@@ -8,6 +8,8 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use SilverStripe\ORM\FieldType\DBField;
+use SilverStripe\ORM\FieldType\DBHTMLText;
 use SilverStripe\Security\Permission;
 use SilverStripe\Security\PermissionProvider;
 use SilverStripe\Security\Security;
@@ -18,12 +20,12 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
  * Class PromosElement
  * @package Dynamic\PageBuildr\Elements
  */
-class PromosElement extends BaseElement implements PermissionProvider
+class ElementPromos extends BaseElement implements PermissionProvider
 {
     /**
      * @var string
      */
-    private static $icon = 'elemental/images/content.svg';
+    private static $icon = 'vendor/dnadesign/silverstripe-elemental/images/base.svg';
 
     /**
      * @return string
@@ -46,11 +48,6 @@ class PromosElement extends BaseElement implements PermissionProvider
     private static $styles = array();
 
     /**
-     * @var string
-     */
-    private static $title = 'Promos Element';
-
-    /**
      * @var array
      */
     private static $many_many = array(
@@ -62,7 +59,7 @@ class PromosElement extends BaseElement implements PermissionProvider
      */
     private static $many_many_extraFields = array(
         'Promos' => array(
-            'SortOrder' => 'Int',
+            'Sort' => 'Int',
         ),
     );
 
@@ -79,10 +76,10 @@ class PromosElement extends BaseElement implements PermissionProvider
 
         if ($this->ID) {
             $config = GridFieldConfig_RelationEditor::create();
-            $config->addComponent(new GridFieldOrderableRows('SortOrder'));
+            $config->addComponent(new GridFieldOrderableRows('Sort'));
             $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
             $config->addComponent(new GridFieldAddExistingSearchButton());
-            $promos = $this->Promos()->sort('SortOrder');
+            $promos = $this->Promos()->sort('Sort');
             $promoField = GridField::create('Promos', 'Promos', $promos, $config);
 
             $fields->addFieldsToTab('Root.Main', array(
@@ -98,7 +95,23 @@ class PromosElement extends BaseElement implements PermissionProvider
      */
     public function getPromoList()
     {
-        return $this->Promos()->sort('SortOrder');
+        return $this->Promos()->sort('Sort');
+    }
+
+    /**
+     * @return DBHTMLText
+     */
+    public function ElementSummary()
+    {
+        return DBField::create_field('HTMLText', $this->HTML)->Summary(20);
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return _t(__CLASS__ . '.BlockType', 'Promos');
     }
 
     /**
@@ -108,11 +121,11 @@ class PromosElement extends BaseElement implements PermissionProvider
     {
         return array(
             'EDIT_PROMOS_ELEMENT' => array(
-                'name' => _t('PromosElement.EDIT_PROMOS_ELEMENT_PERMISSION',
+                'name' => _t('ElementPromos.EDIT_PROMOS_ELEMENT_PERMISSION',
                     'Manage Promos Elements'),
                 'category' => _t('Permissions.PERMISSIONS_PROMOS_ELEMENT',
                     'Elements'),
-                'help' => _t('PromosElement.EDIT_PERMISSION_PROMOS_ELEMENT',
+                'help' => _t('ElementPromos.EDIT_PERMISSION_PROMOS_ELEMENT',
                     'Ability to edit Promos Elements.'),
                 'sort' => 400
             )

@@ -2,12 +2,11 @@
 
 namespace Dynamic\Elements\Tests;
 
-use Dynamic\Elements\Elements\AccordionElement;
-use Dynamic\FlexSlider\Tests\TestPage;
+use Dynamic\Elements\Elements\ElementFeatures;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
 
-class AccordionElementTest extends SapphireTest
+class ElementFeaturesTest extends SapphireTest
 {
     /**
      * @var string
@@ -19,9 +18,8 @@ class AccordionElementTest extends SapphireTest
      */
     public function testGetCMSFields()
     {
-        $object = $this->objFromFixture(AccordionElement::class, 'one');
+        $object = $this->objFromFixture(ElementFeatures::class, 'one');
         $fields = $object->getCMSFields();
         $this->assertInstanceOf(FieldList::class, $fields);
-        $this->assertNotNull($fields->dataFieldByName('Panels'));
     }
 }

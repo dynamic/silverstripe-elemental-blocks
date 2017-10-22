@@ -2,17 +2,17 @@
 
 namespace Dynamic\Elements\ORM;
 
-use Dynamic\Elements\Elements\SlideshowElement;
+use Dynamic\Elements\Elements\ElementSlideshow;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataExtension;
 
-class SlideshowElementSlideDataExtension extends DataExtension
+class ElementSlideshowSlideDataExtension extends DataExtension
 {
     /**
      * @var array
      */
     private static $has_one = array(
-        'SlideshowElement' => SlideshowElement::class,
+        'SlideshowElement' => ElementSlideshow::class,
     );
 
     /**

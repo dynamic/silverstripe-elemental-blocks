@@ -2,7 +2,7 @@
 
 namespace Dynamic\Elements\Model;
 
-use Dynamic\Elements\Elements\PromosElement;
+use Dynamic\Elements\Elements\ElementPromos;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
@@ -48,7 +48,7 @@ class PromoObject extends DataObject
      * @var array
      */
     private static $belongs_many_many = array(
-        'PromosElements' => PromosElement::class
+        'ElementPromos' => ElementPromos::class
     );
 
     /**
@@ -81,7 +81,7 @@ class PromoObject extends DataObject
     {
         $fields = parent::getCMSFields();
 
-        $fields->removeByName('PromosElements');
+        $fields->removeByName('ElementPromos');
 
         $fields->dataFieldByName('Title')->setDescription('Required. For internal reference only');
 
@@ -100,7 +100,7 @@ class PromoObject extends DataObject
         $fields->insertBefore($image, 'Content');
 
         $config = GridFieldConfig_RecordViewer::create();
-        $fields->addFieldToTab('Root.Elements', GridField::create('PromosElements', 'Elements', $this->PromosElements(), $config));
+        $fields->addFieldToTab('Root.Elements', GridField::create('ElementPromos', 'Elements', $this->ElementPromos(), $config));
 
 
         return $fields;
