@@ -59,7 +59,7 @@ class ElementPromos extends BaseElement implements PermissionProvider
      */
     private static $many_many_extraFields = array(
         'Promos' => array(
-            'Sort' => 'Int',
+            'SortOrder' => 'Int',
         ),
     );
 
@@ -76,10 +76,10 @@ class ElementPromos extends BaseElement implements PermissionProvider
 
         if ($this->ID) {
             $config = GridFieldConfig_RelationEditor::create();
-            $config->addComponent(new GridFieldOrderableRows('Sort'));
+            $config->addComponent(new GridFieldOrderableRows('SortOrder'));
             $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
             $config->addComponent(new GridFieldAddExistingSearchButton());
-            $promos = $this->Promos()->sort('Sort');
+            $promos = $this->Promos();
             $promoField = GridField::create('Promos', 'Promos', $promos, $config);
 
             $fields->addFieldsToTab('Root.Main', array(
