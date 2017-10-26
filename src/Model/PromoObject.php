@@ -89,18 +89,17 @@ class PromoObject extends DataObject
 
         $fields->dataFieldByName('Content')
             ->setTitle('Description')
-            ->setDescription('Optional. Set a description for this promo.')
-        ;
+            ->setDescription('Optional. Set a description for this promo.');
 
         $image = $fields->dataFieldByName('Image');
         $image
             ->setFolderName('Uploads/Promos')
-            ->setDescription('Optional. Display an image with this promo.')
-        ;
+            ->setDescription('Optional. Display an image with this promo.');
+
         $fields->insertBefore($image, 'Content');
 
         $config = GridFieldConfig_RecordViewer::create();
-        $fields->addFieldToTab('Root.Elements', GridField::create('ElementPromos', 'Elements', $this->ElementPromos(), $config));
+        // $fields->addFieldToTab('Root.Elements', GridField::create('ElementPromos', 'Elements', $this->ElementPromos(), $config));
 
 
         return $fields;
