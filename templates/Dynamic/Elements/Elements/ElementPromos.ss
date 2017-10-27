@@ -1,4 +1,4 @@
-<div class="$CSSClasses">
+<div class="$ExtraClass">
 	<% if $PromoList %>
 		<div class="row">
 			<% loop $PromoList %>
