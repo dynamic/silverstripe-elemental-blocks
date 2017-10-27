@@ -12,7 +12,7 @@ class ElementAccordionTest extends SapphireTest
     /**
      * @var string
      */
-    protected static $fixture_file = 'fixtures.yml';
+    protected static $fixture_file = '../fixtures.yml';
 
     /**
      *

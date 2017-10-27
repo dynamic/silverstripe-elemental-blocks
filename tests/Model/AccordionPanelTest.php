@@ -2,28 +2,28 @@
 
 namespace Dynamic\Elements\Tests;
 
-use Dynamic\FlexSlider\Tests\TestPage;
-use Dynamic\Elements\Model\PromoObject;
+use Dynamic\Elements\Model\AccordionPanel;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
+use SilverStripe\ORM\ValidationException;
 use SilverStripe\Security\Member;
 
-class PromoObjectTest extends SapphireTest
+class AccordionPanelTest extends SapphireTest
 {
     /**
      * @var string
      */
-    protected static $fixture_file = 'fixtures.yml';
+    protected static $fixture_file = '../fixtures.yml';
 
     /**
      *
      */
     public function testGetCMSFields()
     {
-        $object = $this->objFromFixture(PromoObject::class, 'one');
+        $object = $this->objFromFixture(AccordionPanel::class, 'one');
         $fields = $object->getCMSFields();
         $this->assertInstanceOf(FieldList::class, $fields);
-        #$this->assertNotNull($fields->dataFieldByName('BlockLinkID'));
+        $this->assertNull($fields->dataFieldByName('SortOrder'));
     }
 
     /**
@@ -31,10 +31,10 @@ class PromoObjectTest extends SapphireTest
      */
     public function testValidateName()
     {
-        $object = $this->objFromFixture(PromoObject::class, 'one');
-        $object->Title = '';
-        //$this->setExpectedException('ValidationException');
-        //$object->write();
+        $object = $this->objFromFixture(AccordionPanel::class, 'one');
+        $object->Name = '';
+        //$this->setExpectedException(ValidationException::class);
+        $object->write();
     }
 
     /**
@@ -42,7 +42,7 @@ class PromoObjectTest extends SapphireTest
      */
     public function testCanView()
     {
-        $object = $this->objFromFixture(PromoObject::class, 'one');
+        $object = $this->objFromFixture(AccordionPanel::class, 'one');
         $admin = $this->objFromFixture(Member::class, 'admin');
         $this->assertTrue($object->canView($admin));
         $member = $this->objFromFixture(Member::class, 'default');
@@ -54,11 +54,11 @@ class PromoObjectTest extends SapphireTest
      */
     public function testCanEdit()
     {
-        $object = $this->objFromFixture(PromoObject::class, 'one');
+        $object = $this->objFromFixture(AccordionPanel::class, 'one');
         $admin = $this->objFromFixture(Member::class, 'admin');
         $this->assertTrue($object->canEdit($admin));
         $member = $this->objFromFixture(Member::class, 'default');
-        $this->assertFalse($object->canEdit($member));
+        $this->assertTrue($object->canEdit($member));
     }
 
     /**
@@ -66,11 +66,11 @@ class PromoObjectTest extends SapphireTest
      */
     public function testCanDelete()
     {
-        $object = $this->objFromFixture(PromoObject::class, 'one');
+        $object = $this->objFromFixture(AccordionPanel::class, 'one');
         $admin = $this->objFromFixture(Member::class, 'admin');
         $this->assertTrue($object->canDelete($admin));
         $member = $this->objFromFixture(Member::class, 'default');
-        $this->assertFalse($object->canDelete($member));
+        $this->assertTrue($object->canDelete($member));
     }
 
     /**
@@ -78,10 +78,10 @@ class PromoObjectTest extends SapphireTest
      */
     public function testCanCreate()
     {
-        $object = $this->objFromFixture(PromoObject::class, 'one');
+        $object = $this->objFromFixture(AccordionPanel::class, 'one');
         $admin = $this->objFromFixture(Member::class, 'admin');
         $this->assertTrue($object->canCreate($admin));
         $member = $this->objFromFixture(Member::class, 'default');
-        $this->assertFalse($object->canCreate($member));
+        $this->assertTrue($object->canCreate($member));
     }
 }

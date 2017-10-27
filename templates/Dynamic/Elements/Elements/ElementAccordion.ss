@@ -1,4 +1,4 @@
-<div class="element_content__content <% if $Style %>element_content__$CssStyle<% end_if %>">
+<div class="element_content__content <% if $Style %>element_content__$ExtraClass<% end_if %>">
 	<% if $Headline %><h2>$Headline</h2><% end_if %>
 	$HTML
 	<% if $Panels %>
