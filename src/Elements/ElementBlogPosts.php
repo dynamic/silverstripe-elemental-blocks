@@ -10,12 +10,6 @@ use SilverStripe\Forms\NumericField;
 use SilverStripe\ORM\FieldType\DBField;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 
-/*
-if (!class_exists('SilverStripe\\Blog\\Model\\Blog')) {
-    return;
-}
-*/
-
 /**
  * Class RecentBlogPostsBlock
  */
@@ -99,23 +93,5 @@ class ElementBlogPosts extends BaseElement
         }
 
         return $fields;
-    }
-
-    /**
-     * @param null $member
-     * @return bool
-     */
-    public function canCreate($member = null, $context = [])
-    {
-        return parent::canCreate();
-    }
-
-    /**
-     * @param null $member
-     * @return bool
-     */
-    public function canView($member = null, $context = [])
-    {
-        return parent::canView();
     }
 }

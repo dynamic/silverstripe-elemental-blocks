@@ -1,5 +1,5 @@
 <div class="$CSSClasses">
-	<% if $BlogID %>
+	<% if $Blog.BlogPosts %>
 		<% loop $Blog.BlogPosts.Limit($Limit) %>
 			<p><a href="$Link.ATT">$Title</a></p>
 		<% end_loop %>

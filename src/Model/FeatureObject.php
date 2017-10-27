@@ -15,7 +15,7 @@ use SilverStripe\ORM\ValidationResult;
  * @property string $Name
  * @property string $Title
  * @property DBHTMLText $Content
- * @property int $Sort
+ * @property int $SortOrder
  * @property int $ImageID
  * @property int $ElementFeaturesID
  */
@@ -38,7 +38,7 @@ class FeatureObject extends DataObject
         'Name' => 'Varchar(255)',
         'Title' => 'Varchar(255)',
         'Content' => 'HTMLText',
-        'Sort' => 'Int',
+        'SortOrder' => 'Int',
     );
 
     /**
@@ -97,7 +97,7 @@ class FeatureObject extends DataObject
 
         $fields->removeByName(array(
             'ElementFeaturesID',
-            'Sort',
+            'SortOrder',
         ));
 
         $fields->dataFieldByName('Name')->setDescription('For internal reference only');

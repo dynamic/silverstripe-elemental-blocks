@@ -61,11 +61,11 @@ class ElementFeatures extends BaseElement
         if ($this->ID) {
             // Features
             $config = GridFieldConfig_RecordEditor::create();
-            $config->addComponent(new GridFieldOrderableRows('Sort'));
+            $config->addComponent(new GridFieldOrderableRows('SortOrder'));
             $config->removeComponentsByType('GridFieldAddExistingAutocompleter');
             $config->removeComponentsByType('GridFieldDeleteAction');
             $config->addComponent(new GridFieldDeleteAction(false));
-            $sectionsField = GridField::create('Features', 'Features', $this->Features()->sort('Sort'), $config);
+            $sectionsField = GridField::create('Features', 'Features', $this->Features(), $config);
             $fields->addFieldsToTab('Root.Features', array(
                 $sectionsField,
             ));
@@ -77,9 +77,9 @@ class ElementFeatures extends BaseElement
     /**
      * @return mixed
      */
-    public function getFeatures()
+    public function getFeaturesList()
     {
-        return $this->Features()->sort('Sort');
+        return $this->Features()->sort('SortOrder');
     }
 
     /**

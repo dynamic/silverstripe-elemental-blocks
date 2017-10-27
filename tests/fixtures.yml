@@ -26,9 +26,6 @@ SilverStripe\Security\Member:
     Surname: "Member"
     Email: "user"
     Password: "user"
-Dynamic\Elements\Elements\DynamicBaseElement:
-  default:
-    Title: "Base Element"
 Dynamic\Elements\Model\AccordionPanel:
   one:
     Name: "Panel One"
