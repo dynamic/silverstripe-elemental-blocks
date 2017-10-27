@@ -70,17 +70,12 @@ class ElementPromos extends BaseElement implements PermissionProvider
     {
         $fields = parent::getCMSFields();
 
-        $fields->removeByName(array(
-            'Promos',
-        ));
-
         if ($this->ID) {
-            $config = GridFieldConfig_RelationEditor::create();
+            $promoField = $fields->dataFieldByName('Promos');
+            $config = $promoField->getConfig();
             $config->addComponent(new GridFieldOrderableRows('SortOrder'));
             $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
             $config->addComponent(new GridFieldAddExistingSearchButton());
-            $promos = $this->Promos();
-            $promoField = GridField::create('Promos', 'Promos', $promos, $config);
 
             $fields->addFieldsToTab('Root.Main', array(
                 $promoField,
@@ -95,7 +90,7 @@ class ElementPromos extends BaseElement implements PermissionProvider
      */
     public function getPromoList()
     {
-        return $this->Promos()->sort('Sort');
+        return $this->Promos()->sort('SortOrder');
     }
 
     /**

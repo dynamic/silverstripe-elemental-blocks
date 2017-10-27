@@ -1,6 +1,16 @@
-<div class="element_content__content <% if $Style %>element_content__$CssStyle<% end_if %>">
-	<% if $Headline %><h2 class="homeheadline">$Headline</h2><% end_if %>
-	<% if $Image %><img src="$Image.SetWidth(400).URL" class="img-responsive pull-right"><% end_if %>
-	$Content
-    <div class="clearfix"></div>
+<div class="$CSSClasses">
+	<% if $FeaturesList %>
+        <div class="row">
+			<% loop $FeaturesList %>
+                <div class="col-md-4">
+					<% if $Title %><div class='block_title'><h3>$Title</h3></div><% end_if %>
+					<% if $Image %><img src="$Image.URL" class="img-responsive" alt="$Title.ATT"><% end_if %>
+					<% if $Content %><div class='block_content'>$Content</div><% end_if %>
+					<% if $LinkType != None %><a href="<% if $LinkType == 'External'%>$ExternalLink<% else_if $LinkType == 'Internal'%>$PageLink.Link<% end_if %>"<% if $LinkType == 'External' %> target="_blank"<% end_if %> title="$PageLink.MenuTitle.XML"><% end_if %>
+					$LinkLabel
+					<% if $LinkType != None %></a><% end_if %>
+                </div>
+			<% end_loop %>
+        </div>
+	<% end_if %>
 </div>
