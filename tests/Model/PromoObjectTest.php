@@ -4,9 +4,11 @@ namespace Dynamic\Elements\Tests;
 
 use Dynamic\FlexSlider\Tests\TestPage;
 use Dynamic\Elements\Model\PromoObject;
+use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Security\Member;
+use SilverStripe\Security\Security;
 
 class PromoObjectTest extends SapphireTest
 {
@@ -31,10 +33,13 @@ class PromoObjectTest extends SapphireTest
      */
     public function testValidateName()
     {
-        $object = $this->objFromFixture(PromoObject::class, 'one');
-        $object->Title = '';
-        //$this->setExpectedException('ValidationException');
-        //$object->write();
+        $promo = Injector::inst()->create(PromoObject::class);
+        $valid = $promo->validate()->isValid();
+        $this->assertFalse($valid);
+
+        $promo->Title = 'Title';
+        $valid = $promo->validate()->isValid();
+        $this->assertTrue($valid);
     }
 
     /**
@@ -45,8 +50,12 @@ class PromoObjectTest extends SapphireTest
         $object = $this->objFromFixture(PromoObject::class, 'one');
         $admin = $this->objFromFixture(Member::class, 'admin');
         $this->assertTrue($object->canView($admin));
+
         $member = $this->objFromFixture(Member::class, 'default');
         $this->assertTrue($object->canView($member));
+
+        Security::setCurrentUser();
+        $this->assertTrue($object->canView());
     }
 
     /**
@@ -57,8 +66,12 @@ class PromoObjectTest extends SapphireTest
         $object = $this->objFromFixture(PromoObject::class, 'one');
         $admin = $this->objFromFixture(Member::class, 'admin');
         $this->assertTrue($object->canEdit($admin));
+
         $member = $this->objFromFixture(Member::class, 'default');
         $this->assertFalse($object->canEdit($member));
+
+        Security::setCurrentUser();
+        $this->assertFalse($object->canEdit());
     }
 
     /**
@@ -69,8 +82,12 @@ class PromoObjectTest extends SapphireTest
         $object = $this->objFromFixture(PromoObject::class, 'one');
         $admin = $this->objFromFixture(Member::class, 'admin');
         $this->assertTrue($object->canDelete($admin));
+
         $member = $this->objFromFixture(Member::class, 'default');
         $this->assertFalse($object->canDelete($member));
+
+        Security::setCurrentUser();
+        $this->assertFalse($object->canDelete());
     }
 
     /**
@@ -81,7 +98,11 @@ class PromoObjectTest extends SapphireTest
         $object = $this->objFromFixture(PromoObject::class, 'one');
         $admin = $this->objFromFixture(Member::class, 'admin');
         $this->assertTrue($object->canCreate($admin));
+
         $member = $this->objFromFixture(Member::class, 'default');
         $this->assertFalse($object->canCreate($member));
+
+        Security::setCurrentUser();
+        $this->assertFalse($object->canCreate());
     }
 }

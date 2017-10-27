@@ -32,9 +32,26 @@ class AccordionPanelTest extends SapphireTest
     public function testValidateName()
     {
         $object = $this->objFromFixture(AccordionPanel::class, 'one');
-        $object->Name = '';
-        //$this->setExpectedException(ValidationException::class);
-        $object->write();
+        $valid = $object->validate()->isValid();
+        $this->assertTrue($valid);
+
+        $object->Title = '';
+        $valid = $object->validate()->isValid();
+        $this->assertFalse($valid);
+    }
+
+    /**
+     *
+     */
+    public function testValidateContent()
+    {
+        $object = $this->objFromFixture(AccordionPanel::class, 'one');
+        $valid = $object->validate()->isValid();
+        $this->assertTrue($valid);
+
+        $object->Content = '';
+        $valid = $object->validate()->isValid();
+        $this->assertFalse($valid);
     }
 
     /**
