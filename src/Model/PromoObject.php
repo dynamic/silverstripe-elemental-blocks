@@ -117,7 +117,8 @@ class PromoObject extends DataObject
         $config = GridFieldConfig_RecordViewer::create();
         $fields->addFieldToTab(
             'Root.Elements',
-            GridField::create('ElementPromos',
+            GridField::create(
+                'ElementPromos',
                 'Elements',
                 $this->ElementPromos(),
                 $config
