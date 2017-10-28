@@ -119,9 +119,11 @@ class PromoObject extends DataObject
             'Root.Elements',
             GridField::create('ElementPromos',
                 'Elements',
-                $this->ElementPromos(), $config)
+                $this->ElementPromos(),
+                $config
+            )
         );
-        
+
         return $fields;
     }
 

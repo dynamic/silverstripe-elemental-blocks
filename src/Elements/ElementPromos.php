@@ -118,13 +118,16 @@ class ElementPromos extends BaseElement implements PermissionProvider
             'EDIT_PROMOS_ELEMENT' => array(
                 'name' => _t(
                     'ElementPromos.EDIT_PROMOS_ELEMENT_PERMISSION',
-                    'Manage Promos Elements'),
+                    'Manage Promos Elements'
+                ),
                 'category' => _t(
                     'Permissions.PERMISSIONS_PROMOS_ELEMENT',
-                    'Elements'),
+                    'Elements'
+                ),
                 'help' => _t(
                     'ElementPromos.EDIT_PERMISSION_PROMOS_ELEMENT',
-                    'Ability to edit Promos Elements.'),
+                    'Ability to edit Promos Elements.'
+                ),
                 'sort' => 400
             )
         );
