@@ -10,10 +10,6 @@ use SilverStripe\Forms\NumericField;
 use SilverStripe\ORM\FieldType\DBField;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 
-if (!class_exists(Blog::class)) {
-    return;
-}
-
 /**
  * Class RecentBlogPostsBlock
  */
