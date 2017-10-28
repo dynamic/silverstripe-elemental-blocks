@@ -6,6 +6,10 @@ use Dynamic\Elements\Elements\ElementBlogPosts;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
 
+if (!class_exists(Blog::class)) {
+    return;
+}
+
 class ElementBlogPostsTest extends SapphireTest
 {
     /**
