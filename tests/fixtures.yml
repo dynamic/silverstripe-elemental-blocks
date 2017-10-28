@@ -39,6 +39,12 @@ Dynamic\Elements\Model\AccordionPanel:
     Title: "Panel Two"
     Content: "<p>How are ya?</p>"
 
+Dynamic\Elements\Elements\ElementBlogPosts:
+  one:
+    Title: "Blog Posts"
+    Limit: 3
+    Content: "<p>Recent Posts</p>"
+
 Dynamic\Elements\Elements\ElementAccordion:
   one:
     Title: "Accordion"
@@ -65,3 +71,8 @@ Dynamic\Elements\Elements\ElementPromos:
 Dynamic\FlexSlider\Model\SlideImage:
   default:
     Name: "Slide One"
+
+Dynamic\Elements\Elements\ElementSlideshow:
+  one:
+    Title: 'Slideshow'
+    Slides: =>Dynamic\FlexSlider\Model\SlideImage.default

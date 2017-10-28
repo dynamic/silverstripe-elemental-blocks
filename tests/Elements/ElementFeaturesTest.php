@@ -24,10 +24,31 @@ class ElementFeaturesTest extends SapphireTest
         $this->assertInstanceOf(FieldList::class, $fields);
     }
 
+    /**
+     *
+     */
     public function testGetFeaturesList()
     {
         $object = $this->objFromFixture(ElementFeatures::class, 'one');
         $this->assertInstanceOf(DataList::class, $object->getFeaturesList());
         $this->assertEquals($object->getFeaturesList(), $object->Features()->sort('SortOrder'));
+    }
+
+    /**
+     *
+     */
+    public function testGetElementSummary()
+    {
+        $object = $this->objFromFixture(ElementFeatures::class, 'one');
+        $this->assertEquals($object->ElementSummary(), $object->dbObject("Content")->Summary(20));
+    }
+
+    /**
+     *
+     */
+    public function testGetType()
+    {
+        $object = $this->objFromFixture(ElementFeatures::class, 'one');
+        $this->assertEquals($object->getType(), 'Features');
     }
 }

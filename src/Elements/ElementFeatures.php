@@ -87,7 +87,7 @@ class ElementFeatures extends BaseElement
      */
     public function ElementSummary()
     {
-        return DBField::create_field('Content', $this->Content)->Summary(20);
+        return DBField::create_field('HTMLText', $this->Content)->Summary(20);
     }
 
     /**
