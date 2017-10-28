@@ -116,11 +116,14 @@ class ElementPromos extends BaseElement implements PermissionProvider
     {
         return array(
             'EDIT_PROMOS_ELEMENT' => array(
-                'name' => _t('ElementPromos.EDIT_PROMOS_ELEMENT_PERMISSION',
+                'name' => _t(
+                    'ElementPromos.EDIT_PROMOS_ELEMENT_PERMISSION',
                     'Manage Promos Elements'),
-                'category' => _t('Permissions.PERMISSIONS_PROMOS_ELEMENT',
+                'category' => _t(
+                    'Permissions.PERMISSIONS_PROMOS_ELEMENT',
                     'Elements'),
-                'help' => _t('ElementPromos.EDIT_PERMISSION_PROMOS_ELEMENT',
+                'help' => _t(
+                    'ElementPromos.EDIT_PERMISSION_PROMOS_ELEMENT',
                     'Ability to edit Promos Elements.'),
                 'sort' => 400
             )
@@ -139,7 +142,7 @@ class ElementPromos extends BaseElement implements PermissionProvider
      */
     public function canCreate($member = null, $context = [])
     {
-        if ( ! $member) {
+        if (! $member) {
             $member = Security::getCurrentUser();
         }
 
@@ -168,7 +171,7 @@ class ElementPromos extends BaseElement implements PermissionProvider
      */
     public function canEdit($member = null, $context = [])
     {
-        if ( ! $member) {
+        if (! $member) {
             $member = Security::getCurrentUser();
         }
 
@@ -187,7 +190,7 @@ class ElementPromos extends BaseElement implements PermissionProvider
      */
     public function canDelete($member = null, $context = [])
     {
-        if ( ! $member) {
+        if (! $member) {
             $member = Security::getCurrentUser();
         }
 

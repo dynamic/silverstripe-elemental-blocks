@@ -72,5 +72,4 @@ class FeatureObjectTest extends SapphireTest
         $feature = Injector::inst()->create(FeatureObject::class);
         $this->assertTrue($feature->canDelete());
     }
-
 }
