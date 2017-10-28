@@ -5,12 +5,6 @@ Name: dynamicelementsconfig
 Dynamic\Elements\Elements\ElementSlideshow:
   extensions:
     - Dynamic\FlexSlider\ORM\FlexSlider
-
 Dynamic\FlexSlider\Model\SlideImage:
   extensions:
     - Dynamic\Elements\ORM\ElementSlideshowSlideDataExtension
-
-Dynamic\Elements\ORM\PromoObject:
-  extensions:
-    - Dynamic\CoreTools\ORM\Linkable
-    - SilverStripe\Versioned\Versioned('Stage','Live')

@@ -11,6 +11,7 @@ use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\ValidationResult;
 use SilverStripe\Security\Permission;
 use SilverStripe\Security\Security;
+use SilverStripe\Versioned\Versioned;
 
 /**
  * Class PromoObject
@@ -73,6 +74,20 @@ class PromoObject extends DataObject
         'Headline' => 'Headline',
         'Content' => 'Description',
     );
+
+    /**
+     * @var array
+     */
+    private static $extensions = [
+        Versioned::class,
+    ];
+
+    /**
+     * Adds Publish button
+     *
+     * @var bool
+     */
+    private static $versioned_gridfield_extensions = true;
 
     /**
      * @return FieldList

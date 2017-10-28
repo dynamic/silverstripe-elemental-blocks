@@ -8,6 +8,7 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use SilverStripe\ORM\ValidationResult;
+use SilverStripe\Versioned\Versioned;
 
 /**
  * Class PageSectionObject
@@ -76,6 +77,20 @@ class FeatureObject extends DataObject
         'Name' => 'Name',
         'Title' => 'Title',
     );
+
+    /**
+     * @var array
+     */
+    private static $extensions = [
+        Versioned::class,
+    ];
+
+    /**
+     * Adds Publish button
+     *
+     * @var bool
+     */
+    private static $versioned_gridfield_extensions = true;
 
     /**
      * @return FieldList
