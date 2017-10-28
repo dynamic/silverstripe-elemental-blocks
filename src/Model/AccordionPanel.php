@@ -8,6 +8,7 @@ use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\ValidationResult;
+use SilverStripe\Versioned\Versioned;
 
 class AccordionPanel extends DataObject
 {
@@ -25,6 +26,20 @@ class AccordionPanel extends DataObject
      * @var string
      */
     private static $description = 'A panel for a Accordion widget';
+
+    /**
+     * @var array
+     */
+    private static $extensions = [
+        Versioned::class,
+    ];
+
+    /**
+     * Adds Publish button
+     *
+     * @var bool
+     */
+    private static $versioned_gridfield_extensions = true;
 
     /**
      * @var array
