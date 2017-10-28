@@ -50,6 +50,13 @@ class ElementPromos extends BaseElement implements PermissionProvider
     /**
      * @var array
      */
+    private static $db = [
+        'Content' => DBHTMLText::class,
+    ];
+
+    /**
+     * @var array
+     */
     private static $many_many = array(
         'Promos' => PromoObject::class,
     );
@@ -98,7 +105,7 @@ class ElementPromos extends BaseElement implements PermissionProvider
      */
     public function ElementSummary()
     {
-        return DBField::create_field('HTMLText', $this->HTML)->Summary(20);
+        return DBField::create_field('HTMLText', $this->Content)->Summary(20);
     }
 
     /**

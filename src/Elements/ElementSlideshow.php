@@ -31,7 +31,7 @@ class ElementSlideshow extends BaseElement
      * @var array
      */
     private static $db = [
-        'HTML' => 'HTMLText',
+        'Content' => 'HTMLText',
     ];
 
     /**
@@ -39,7 +39,7 @@ class ElementSlideshow extends BaseElement
      */
     public function ElementSummary()
     {
-        return DBField::create_field('HTMLText', $this->HTML)->Summary(20);
+        return DBField::create_field('HTMLText', $this->Content)->Summary(20);
     }
 
     /**
@@ -47,6 +47,6 @@ class ElementSlideshow extends BaseElement
      */
     public function getType()
     {
-        return _t(__CLASS__ . '.BlockType', 'Slide Show');
+        return _t(__CLASS__ . '.BlockType', 'Slideshow');
     }
 }

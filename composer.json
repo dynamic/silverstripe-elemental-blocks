@@ -16,6 +16,7 @@
     "require": {
         "silverstripe/recipe-cms": "^1.0",
         "silverstripe/vendor-plugin": "^1.0",
+        "silverstripe/blog": "^3.0",
         "dynamic/flexslider": "3.0.x-dev",
         "dnadesign/silverstripe-elemental": "2.x-dev"
     },

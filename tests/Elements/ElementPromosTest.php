@@ -37,4 +37,22 @@ class ElementPromosTest extends SapphireTest
         $this->assertInstanceOf(DataList::class, $object->getPromoList());
         $this->assertEquals($object->getPromoList(), $object->Promos()->sort('SortOrder'));
     }
+
+    /**
+     *
+     */
+    public function testGetElementSummary()
+    {
+        $object = $this->objFromFixture(ElementPromos::class, 'one');
+        $this->assertEquals($object->ElementSummary(), $object->dbObject("Content")->Summary(20));
+    }
+
+    /**
+     *
+     */
+    public function testGetType()
+    {
+        $object = $this->objFromFixture(ElementPromos::class, 'one');
+        $this->assertEquals($object->getType(), 'Promos');
+    }
 }

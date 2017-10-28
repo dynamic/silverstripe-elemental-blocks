@@ -1,5 +1,7 @@
 <div class="$ExtraClass">
-	<% if $PromoList %>
+	<% if $ShowTitle %>$Title<% end_if %>
+	<% if $Content %>$Content<% end_if %>
+ 	<% if $PromoList %>
 		<div class="row">
 			<% loop $PromoList %>
                 <div class="col-md-4">
