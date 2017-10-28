@@ -39,7 +39,7 @@ class ElementSectionNavigation extends BaseElement
         if ($page = $this->getPage()) {
             if ($page->Children()->Count() > 0) {
                 return $page->Children();
-            } else if ($page->Parent()) {
+            } elseif ($page->Parent()) {
                 return $page->Parent()->Children();
             } else {
                 return false;

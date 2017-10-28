@@ -97,5 +97,4 @@ class ElementFeatures extends BaseElement
     {
         return _t(__CLASS__ . '.BlockType', 'Features');
     }
-
 }

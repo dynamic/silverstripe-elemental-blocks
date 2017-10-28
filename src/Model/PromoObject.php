@@ -115,8 +115,15 @@ class PromoObject extends DataObject
         $fields->insertBefore($image, 'Content');
 
         $config = GridFieldConfig_RecordViewer::create();
-        $fields->addFieldToTab('Root.Elements', GridField::create('ElementPromos', 'Elements', $this->ElementPromos(), $config));
-
+        $fields->addFieldToTab(
+            'Root.Elements',
+            GridField::create(
+                'ElementPromos',
+                'Elements',
+                $this->ElementPromos(),
+                $config
+            )
+        );
 
         return $fields;
     }
@@ -147,7 +154,7 @@ class PromoObject extends DataObject
      */
     public function canCreate($member = null, $context = [])
     {
-        if ( ! $member) {
+        if (! $member) {
             $member = Security::getCurrentUser();
         }
 
@@ -171,7 +178,7 @@ class PromoObject extends DataObject
      */
     public function canEdit($member = null, $context = [])
     {
-        if ( ! $member) {
+        if (! $member) {
             $member = Security::getCurrentUser();
         }
 
@@ -185,7 +192,7 @@ class PromoObject extends DataObject
      */
     public function canDelete($member = null, $context = [])
     {
-        if ( ! $member) {
+        if (! $member) {
             $member = Security::getCurrentUser();
         }
 
