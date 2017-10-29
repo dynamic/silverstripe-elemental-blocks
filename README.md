@@ -1,6 +1,6 @@
 # dynamic-elements
 
-Custom elements that work with SilverStripe Elemental module
+Additional elements for the SilverStripe Elemental module
 
 [![Build Status](https://travis-ci.org/dynamic/dynamic-elements.svg?branch=master)](https://travis-ci.org/dynamic/dynamic-elements)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/dynamic/dynamic-elements/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/dynamic/dynamic-elements/?branch=master)
@@ -10,15 +10,23 @@ Custom elements that work with SilverStripe Elemental module
 
 ## Requirements
 
-- SilverStripe 3.2
+- SilverStripe 4
 
 ## Installation
 
-This is how you install dynamic-elements.
+`composer require dynamic/dynamic-elements`
 
-## Example usage
+## Usage
 
-You use dynamic-elements like this.
+dynamic-elements will add the following Elements to your site:
+
+* Accordion
+* Recent Blog Posts
+* Child Pages
+* Featured Content
+* Promos
+* Section Navigation
+* Slideshow
 
 ## Documentation
 
