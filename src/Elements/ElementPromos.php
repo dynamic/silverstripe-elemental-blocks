@@ -75,25 +75,25 @@ class ElementPromos extends BaseElement implements PermissionProvider
      */
     public function getCMSFields()
     {
-        $fields = parent::getCMSFields();
+        $this->beforeUpdateCMSFields(function (FieldList $fields) {
+            $fields->dataFieldByName('Content')
+                ->setRows(8)
+            ;
 
-        $fields->dataFieldByName('Content')
-            ->setRows(8)
-        ;
+            if ($this->ID) {
+                $promoField = $fields->dataFieldByName('Promos');
+                $config = $promoField->getConfig();
+                $config->addComponent(new GridFieldOrderableRows('SortOrder'));
+                $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
+                $config->addComponent(new GridFieldAddExistingSearchButton());
 
-        if ($this->ID) {
-            $promoField = $fields->dataFieldByName('Promos');
-            $config = $promoField->getConfig();
-            $config->addComponent(new GridFieldOrderableRows('SortOrder'));
-            $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
-            $config->addComponent(new GridFieldAddExistingSearchButton());
+                $fields->addFieldsToTab('Root.Promos', array(
+                    $promoField,
+                ));
+            }
+        });
 
-            $fields->addFieldsToTab('Root.Promos', array(
-                $promoField,
-            ));
-        }
-
-        return $fields;
+        return parent::getCMSFields();
     }
 
     /**

@@ -4,7 +4,9 @@ namespace Dynamic\Elements\Elements;
 
 use DNADesign\Elemental\Models\BaseElement;
 use Dynamic\Elements\Model\FeatureObject;
+use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\GridField\GridFieldDeleteAction;
 use SilverStripe\ORM\FieldType\DBField;
@@ -56,22 +58,22 @@ class ElementFeatures extends BaseElement
      */
     public function getCMSFields()
     {
-        $fields = parent::getCMSFields();
+        $this->beforeUpdateCMSFields(function (FieldList $fields) {
+            $fields->dataFieldByName('Content')
+                ->setRows(8);
 
-        if ($this->ID) {
-            // Features
-            $config = GridFieldConfig_RecordEditor::create();
-            $config->addComponent(new GridFieldOrderableRows('Sort'));
-            $config->removeComponentsByType('GridFieldAddExistingAutocompleter');
-            $config->removeComponentsByType('GridFieldDeleteAction');
-            $config->addComponent(new GridFieldDeleteAction(false));
-            $sectionsField = GridField::create('Features', 'Features', $this->Features(), $config);
-            $fields->addFieldsToTab('Root.Features', array(
-                $sectionsField,
-            ));
-        }
+            if ($this->ID) {
+                // Features
+                $features = $fields->dataFieldByName('Features');
+                $config = $features->getConfig();
+                $config->addComponent(new GridFieldOrderableRows());
+                $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
+                $config->removeComponentsByType(GridFieldDeleteAction::class);
+                $config->addComponent(new GridFieldDeleteAction(false));
+            }
+        });
 
-        return $fields;
+        return parent::getCMSFields();
     }
 
     /**
