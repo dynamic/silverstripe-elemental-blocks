@@ -24,20 +24,6 @@ class FeatureObjectTest extends SapphireTest
     }
 
     /**
-     * Tests validate()
-     */
-    public function testValidate()
-    {
-        $feature = Injector::inst()->create(FeatureObject::class);
-        $valid = $feature->validate()->isValid();
-        $this->assertFalse($valid);
-
-        $feature->Name = 'Name';
-        $valid = $feature->validate()->isValid();
-        $this->assertTrue($valid);
-    }
-
-    /**
      * Tests canCreate()
      */
     public function testCanCreate()

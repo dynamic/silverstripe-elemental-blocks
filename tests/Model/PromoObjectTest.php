@@ -2,7 +2,6 @@
 
 namespace Dynamic\Elements\Tests;
 
-use Dynamic\FlexSlider\Tests\TestPage;
 use Dynamic\Elements\Model\PromoObject;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Dev\SapphireTest;
@@ -18,28 +17,12 @@ class PromoObjectTest extends SapphireTest
     protected static $fixture_file = '../fixtures.yml';
 
     /**
-     *
+     * Tests getCMSFields()
      */
     public function testGetCMSFields()
     {
-        $object = $this->objFromFixture(PromoObject::class, 'one');
-        $fields = $object->getCMSFields();
-        $this->assertInstanceOf(FieldList::class, $fields);
-        #$this->assertNotNull($fields->dataFieldByName('BlockLinkID'));
-    }
-
-    /**
-     *
-     */
-    public function testValidateName()
-    {
         $promo = Injector::inst()->create(PromoObject::class);
-        $valid = $promo->validate()->isValid();
-        $this->assertFalse($valid);
-
-        $promo->Title = 'Title';
-        $valid = $promo->validate()->isValid();
-        $this->assertTrue($valid);
+        $this->assertInstanceOf(FieldList::class, $promo->getCMSFields());
     }
 
     /**

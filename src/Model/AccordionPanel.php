@@ -3,14 +3,11 @@
 namespace Dynamic\Elements\Model;
 
 use Dynamic\Elements\Elements\ElementAccordion;
-use SilverStripe\AssetAdmin\Forms\UploadField;
-use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\ORM\DataObject;
-use SilverStripe\ORM\ValidationResult;
-use SilverStripe\Versioned\Versioned;
+use SilverStripe\Forms\HTMLEditor\TinyMCEConfig;
+use SilverStripe\View\Requirements;
 
-class AccordionPanel extends DataObject
+class AccordionPanel extends BaseElementObject
 {
     /**
      * @var string
@@ -30,23 +27,7 @@ class AccordionPanel extends DataObject
     /**
      * @var array
      */
-    private static $extensions = [
-        Versioned::class,
-    ];
-
-    /**
-     * Adds Publish button
-     *
-     * @var bool
-     */
-    private static $versioned_gridfield_extensions = true;
-
-    /**
-     * @var array
-     */
     private static $db = array(
-        'Title' => 'Varchar(255)',
-        'Content' => 'HTMLText',
         'Sort' => 'Int',
     );
     /**
@@ -54,7 +35,6 @@ class AccordionPanel extends DataObject
      */
     private static $has_one = array(
         'Accordion' => ElementAccordion::class,
-        'Image' => Image::class,
     );
 
     /**
@@ -67,35 +47,17 @@ class AccordionPanel extends DataObject
      */
     public function getCMSFields()
     {
-        $fields = parent::getCMSFields();
+        $this->beforeUpdateCMSFields(function ($fields) {
+            $fields->removeByName(array(
+                'Sort',
+                'AccordionID',
+            ));
 
-        $fields->removeByName(array(
-            'Sort',
-            'AccordionID',
-        ));
+            $fields->dataFieldByName('Image')
+                ->setFolderName('Uploads/Elements/Accordions');
+        });
 
-        $fields->addFieldToTab(
-            'Root.Main',
-            UploadField::create('Image')
-                ->setFolderName('Uploads/Elements/Accordions'),
-            'Content'
-        );
-
-        return $fields;
-    }
-
-    /**
-     * @return ValidationResult
-     */
-    public function validate()
-    {
-        $result = parent::validate();
-
-        if (!$this->Title || !$this->Content) {
-            $result->addError('Both Title and Content are required');
-        }
-
-        return $result;
+        return parent::getCMSFields();
     }
 
     /**

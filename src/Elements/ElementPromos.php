@@ -77,6 +77,10 @@ class ElementPromos extends BaseElement implements PermissionProvider
     {
         $fields = parent::getCMSFields();
 
+        $fields->dataFieldByName('Content')
+            ->setRows(8)
+        ;
+
         if ($this->ID) {
             $promoField = $fields->dataFieldByName('Promos');
             $config = $promoField->getConfig();
@@ -84,7 +88,7 @@ class ElementPromos extends BaseElement implements PermissionProvider
             $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
             $config->addComponent(new GridFieldAddExistingSearchButton());
 
-            $fields->addFieldsToTab('Root.Main', array(
+            $fields->addFieldsToTab('Root.Promos', array(
                 $promoField,
             ));
         }
