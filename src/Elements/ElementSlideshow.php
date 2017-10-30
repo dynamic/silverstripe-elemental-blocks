@@ -3,6 +3,7 @@
 namespace Dynamic\Elements\Elements;
 
 use DNADesign\Elemental\Models\BaseElement;
+use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\FieldType\DBField;
 
 class ElementSlideshow extends BaseElement
@@ -33,6 +34,16 @@ class ElementSlideshow extends BaseElement
     private static $db = [
         'Content' => 'HTMLText',
     ];
+
+    public function getCMSFields()
+    {
+        $this->beforeUpdateCMSFields(function (FieldList $fields) {
+            $fields->dataFieldByName('Content')
+                ->setRows(8);
+        });
+
+        return parent::getCMSFields();
+    }
 
     /**
      * @return HTMLText
