@@ -73,19 +73,15 @@ class ElementAccordion extends BaseElement
 
         $fields->removeByName(array(
             'Sort',
-            'Panels',
         ));
 
-        $config = GridFieldConfig_RecordEditor::create();
-        $config->addComponent(new GridFieldOrderableRows('Sort'));
-        $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
-        $config->removeComponentsByType(GridFieldDeleteAction::class);
-        $config->addComponent(new GridFieldDeleteAction(false));
-
         if ($this->ID) {
-            $fields->addFieldsToTab('Root.Panels', array(
-                GridField::create('Panels', 'Accordion Panels', $this->Panels()->sort('Sort'), $config),
-            ));
+            $panels = $fields->dataFieldByName('Panels');
+            $config = $panels->getConfig();
+            $config->addComponent(new GridFieldOrderableRows('Sort'));
+            $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
+            $config->removeComponentsByType(GridFieldDeleteAction::class);
+            $config->addComponent(new GridFieldDeleteAction(false));
         }
 
         return $fields;

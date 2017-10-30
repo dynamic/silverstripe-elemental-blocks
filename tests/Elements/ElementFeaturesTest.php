@@ -31,7 +31,7 @@ class ElementFeaturesTest extends SapphireTest
     {
         $object = $this->objFromFixture(ElementFeatures::class, 'one');
         $this->assertInstanceOf(DataList::class, $object->getFeaturesList());
-        $this->assertEquals($object->getFeaturesList(), $object->Features()->sort('SortOrder'));
+        $this->assertEquals($object->getFeaturesList(), $object->Features()->sort('Sort'));
     }
 
     /**

@@ -3,24 +3,15 @@
 namespace Dynamic\Elements\Model;
 
 use Dynamic\Elements\Elements\ElementFeatures;
-use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\ORM\DataObject;
-use SilverStripe\ORM\FieldType\DBHTMLText;
-use SilverStripe\ORM\ValidationResult;
-use SilverStripe\Versioned\Versioned;
 
 /**
  * Class PageSectionObject
  *
- * @property string $Name
- * @property string $Title
- * @property DBHTMLText $Content
- * @property int $SortOrder
- * @property int $ImageID
+ * @property int $Sort
  * @property int $ElementFeaturesID
  */
-class FeatureObject extends DataObject
+class FeatureObject extends BaseElementObject
 {
     /**
      * @return string
@@ -36,19 +27,14 @@ class FeatureObject extends DataObject
      * @var array
      */
     private static $db = array(
-        'Name' => 'Varchar(255)',
-        'Title' => 'Varchar(255)',
-        'Content' => 'HTMLText',
-        'SortOrder' => 'Int',
+        'Sort' => 'Int',
     );
 
     /**
      * @var array
      */
     private static $has_one = array(
-        'Image' => Image::class,
         'ElementFeatures' => ElementFeatures::class,
-        //'BlockLink' => 'Link', // todo readd once Linkable is SS4 compatable
     );
 
     /**
@@ -59,38 +45,7 @@ class FeatureObject extends DataObject
     /**
      * @var string
      */
-    private static $default_sort = 'Name ASC';
-
-    /**
-     * @var array
-     */
-    private static $summary_fields = array(
-        'Image.CMSThumbnail' => 'Image',
-        'Name' => 'Name',
-        'Title' => 'Title',
-    );
-
-    /**
-     * @var array
-     */
-    private static $searchable_fields = array(
-        'Name' => 'Name',
-        'Title' => 'Title',
-    );
-
-    /**
-     * @var array
-     */
-    private static $extensions = [
-        Versioned::class,
-    ];
-
-    /**
-     * Adds Publish button
-     *
-     * @var bool
-     */
-    private static $versioned_gridfield_extensions = true;
+    private static $default_sort = 'Sort';
 
     /**
      * @return FieldList
@@ -98,44 +53,16 @@ class FeatureObject extends DataObject
     public function getCMSFields()
     {
         $this->beforeUpdateCMSFields(function ($fields) {
+            $fields->removeByName(array(
+                'ElementFeaturesID',
+                'Sort',
+            ));
 
-            /* // todo readd once Linkable is SS4 compatable
-            $fields->addFieldToTab(
-                'Root.Main',
-                LinkField::create('BlockLinkID', 'Link'),
-                'Content'
-            );
-            */
+            $fields->dataFieldByName('Image')
+                ->setFolderName('Uploads/Elements/Features');
         });
 
-        $fields = parent::getCMSFields();
-
-        $fields->removeByName(array(
-            'ElementFeaturesID',
-            'SortOrder',
-        ));
-
-        $fields->dataFieldByName('Name')->setDescription('For internal reference only');
-
-        $image = $fields->dataFieldByName('Image');
-        $image->setFolderName('Uploads/PageSections');
-        $fields->insertBefore($image, 'Content');
-
-        return $fields;
-    }
-
-    /**
-     * @return ValidationResult
-     */
-    public function validate()
-    {
-        $result = parent::validate();
-
-        if (!$this->Name) {
-            $result->addError('Name is requied before you can save');
-        }
-
-        return $result;
+        return parent::getCMSFields();
     }
 
     /**
