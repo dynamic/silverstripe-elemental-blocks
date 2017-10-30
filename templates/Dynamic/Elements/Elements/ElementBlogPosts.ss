@@ -1,10 +1,10 @@
 <div class="$ExtraClass">
 	<% if $ShowTitle %><h3>$Title</h3><% end_if %>
 	<% if $Content %>$Content<% end_if %>
-	<% if $Blog.BlogPosts %>
-		<% loop $Blog.BlogPosts.Limit($Limit) %>
+	<% if $PostsList %>
+		<% loop $PostsList %>
 			<p><a href="$Link.ATT">$Title</a></p>
 		<% end_loop %>
-		<p><a href="#">View all $Blog.Title Posts</a></p>
+		<p><a href="$Blog.Link" class="btn btn-info">View all posts</a></p>
 	<% end_if %>
 </div>

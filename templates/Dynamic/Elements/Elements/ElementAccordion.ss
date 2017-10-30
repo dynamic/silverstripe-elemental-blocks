@@ -14,6 +14,7 @@
 				<% end_if %>
                 	<h4>$Title</h4>
 					$Content
+					<% if $PageLink %>$PageLink<% end_if %>
 				</div>
 			</div>
 		<% end_loop %>

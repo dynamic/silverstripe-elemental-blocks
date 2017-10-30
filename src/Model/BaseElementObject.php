@@ -17,7 +17,7 @@ class BaseElementObject extends DataObject
     private static $db = array(
         'Name' => 'Varchar(255)',
         'Title' => 'Varchar(255)',
-        'Link' => 'Link',
+        'PageLink' => 'Link',
         'Content' => 'HTMLText',
     );
 
@@ -71,8 +71,8 @@ class BaseElementObject extends DataObject
     public function getCMSFields()
     {
         $this->beforeUpdateCMSFields(function ($fields) {
-            $fields->removeByName('LinkID');
-            $link = $fields->fieldByName('Root.Main.Link')
+            $fields->removeByName('PageLinkID');
+            $link = $fields->fieldByName('Root.Main.PageLink')
                 ->setDescription('Optional. Link to a Page')
             ;
             $fields->insertBefore('Content', $link);

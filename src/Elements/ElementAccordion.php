@@ -69,21 +69,24 @@ class ElementAccordion extends BaseElement
      */
     public function getCMSFields()
     {
-        $fields = parent::getCMSFields();
+        $this->beforeUpdateCMSFields(function ($fields) {
+            $fields->removeByName(array(
+                'Sort',
+            ));
 
-        $fields->removeByName(array(
-            'Sort',
-        ));
+            $fields->dataFieldByName('Content')
+                ->setRows(8);
 
-        if ($this->ID) {
-            $panels = $fields->dataFieldByName('Panels');
-            $config = $panels->getConfig();
-            $config->addComponent(new GridFieldOrderableRows('Sort'));
-            $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
-            $config->removeComponentsByType(GridFieldDeleteAction::class);
-            $config->addComponent(new GridFieldDeleteAction(false));
-        }
+            if ($this->ID) {
+                $panels = $fields->dataFieldByName('Panels');
+                $config = $panels->getConfig();
+                $config->addComponent(new GridFieldOrderableRows('Sort'));
+                $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
+                $config->removeComponentsByType(GridFieldDeleteAction::class);
+                $config->addComponent(new GridFieldDeleteAction(false));
+            }
+        });
 
-        return $fields;
+        return parent::getCMSFields();
     }
 }

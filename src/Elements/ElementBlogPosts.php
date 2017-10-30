@@ -78,20 +78,30 @@ class ElementBlogPosts extends BaseElement
      */
     public function getCMSFields()
     {
-        $fields = parent::getCMSFields();
+        $this->beforeUpdateCMSFields(function (FieldList $fields) {
+            $fields->dataFieldByName('Content')
+                ->setRows(8);
 
-        $fields->addFieldsToTab('Root.Main', array(
-            NumericField::create('Limit'),
-        ));
+            $fields->dataFieldByName('Limit')
+                ->setTitle('Articles to show');
 
-        if (class_exists('Blog')) {
-            $fields->addFieldToTab(
-                'Root.Main',
-                DropdownField::create('BlogID', 'Blog', Blog::get()->map())
-                    ->setEmptyString('')
-            );
-        }
+            if (class_exists(Blog::class)) {
+                $fields->insertBefore(
+                    $fields->dataFieldByName('BlogID')
+                        ->setTitle('Featured Blog'),
+                    'Limit'
+                );
+            }
+        });
 
-        return $fields;
+        return parent::getCMSFields();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPostsList()
+    {
+        return Blog::get()->byID($this->BlogID)->getBlogPosts()->Limit($this->Limit);
     }
 }
