@@ -37,6 +37,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
+        "expose": [
+            "thirdparty"
+        ],
         "branch-alias": {
             "dev-master": "2.0.x-dev"
         }

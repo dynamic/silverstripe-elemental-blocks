@@ -42,22 +42,6 @@ class ElementAccordion extends BaseElement
     ];
 
     /**
-     * @return DBHTMLText
-     */
-    public function ElementSummary()
-    {
-        return DBField::create_field('HTMLText', $this->Content)->Summary(20);
-    }
-
-    /**
-     * @return string
-     */
-    public function getType()
-    {
-        return _t(__CLASS__ . '.BlockType', 'Accordion');
-    }
-
-    /**
      * @var array
      */
     private static $has_many = array(
@@ -88,5 +72,21 @@ class ElementAccordion extends BaseElement
         });
 
         return parent::getCMSFields();
+    }
+
+    /**
+     * @return DBHTMLText
+     */
+    public function ElementSummary()
+    {
+        return DBField::create_field('HTMLText', $this->Content)->Summary(20);
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return _t(__CLASS__ . '.BlockType', 'Accordion');
     }
 }
