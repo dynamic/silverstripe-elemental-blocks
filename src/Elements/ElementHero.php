@@ -65,6 +65,4 @@ class ElementHero extends BaseElement
     {
         return _t(__CLASS__ . '.BlockType', 'Hero');
     }
-
-
 }

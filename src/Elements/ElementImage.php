@@ -58,5 +58,4 @@ class ElementImage extends BaseElement
     {
         return _t(__CLASS__ . '.BlockType', 'Image');
     }
-
 }
