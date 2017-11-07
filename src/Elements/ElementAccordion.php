@@ -4,6 +4,7 @@ namespace Dynamic\Elements\Elements;
 
 use DNADesign\Elemental\Models\BaseElement;
 use Dynamic\Elements\Model\AccordionPanel;
+use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
