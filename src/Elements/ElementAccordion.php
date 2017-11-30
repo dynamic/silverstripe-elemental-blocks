@@ -53,7 +53,9 @@ class ElementAccordion extends BaseElement
      */
     public function getCMSFields()
     {
+
         $this->beforeUpdateCMSFields(function ($fields) {
+            /** @var FieldList $fields */
             $fields->removeByName(array(
                 'Sort',
             ));
@@ -62,7 +64,10 @@ class ElementAccordion extends BaseElement
                 ->setRows(8);
 
             if ($this->ID) {
+                /** @var GridField $panels */
                 $panels = $fields->dataFieldByName('Panels');
+                $panels->setTitle(_t(__CLASS__ . '.Panels', 'Panels'));
+
                 $config = $panels->getConfig();
                 $config->addComponent(new GridFieldOrderableRows('Sort'));
                 $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
