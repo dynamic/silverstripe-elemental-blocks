@@ -39,17 +39,6 @@ Dynamic\Elements\Model\AccordionPanel:
     Title: "Panel Two"
     Content: "<p>How are ya?</p>"
 
-SilverStripe\Blog\Model\Blog:
-  default:
-    Title: "Blog"
-
-Dynamic\Elements\Elements\ElementBlogPosts:
-  one:
-    Title: "Blog Posts"
-    Limit: 3
-    Content: "<p>Recent Posts</p>"
-    BlogID: =>SilverStripe\Blog\Model\Blog.default
-
 Dynamic\Elements\Elements\ElementAccordion:
   one:
     Title: "Accordion"

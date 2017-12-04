@@ -16,7 +16,6 @@
     "require": {
         "silverstripe/recipe-cms": "^1.0",
         "silverstripe/vendor-plugin": "^1.0",
-        "silverstripe/blog": "^3.0",
         "dynamic/flexslider": "3.0.x-dev",
         "dnadesign/silverstripe-elemental": "2.x-dev",
         "silverstripe/elemental-blocks": "^1.0@dev"
@@ -24,6 +23,9 @@
     "require-dev": {
         "phpunit/PHPUnit": "^5.7",
         "squizlabs/php_codesniffer": "*"
+    },
+    "suggest": {
+        "dynamic/dynamic-elements-blog": "For the blog element"
     },
     "autoload": {
         "psr-4": {
