@@ -4,8 +4,6 @@ namespace Dynamic\Elements\Model;
 
 use Dynamic\Elements\Elements\ElementAccordion;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\HTMLEditor\TinyMCEConfig;
-use SilverStripe\View\Requirements;
 
 class AccordionPanel extends BaseElementObject
 {
@@ -41,6 +39,11 @@ class AccordionPanel extends BaseElementObject
      * @var string
      */
     private static $default_sort = 'Sort';
+
+    /**
+     * @var string
+     */
+    private static $table_name = 'AccordionPanel';
 
     /**
      * @return FieldList

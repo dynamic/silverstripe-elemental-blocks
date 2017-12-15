@@ -8,12 +8,10 @@ use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
 
 /**
- * Class ElementEmailSignupTest
- * @package Dynamic\Elements\Tests
+ * Class ElementEmailSignupTest.
  */
 class ElementEmailSignupTest extends SapphireTest
 {
-
     /**
      *
      */

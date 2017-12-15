@@ -40,7 +40,7 @@ class ElementFeaturesTest extends SapphireTest
     public function testGetElementSummary()
     {
         $object = $this->objFromFixture(ElementFeatures::class, 'one');
-        $this->assertEquals($object->ElementSummary(), $object->dbObject("Content")->Summary(20));
+        $this->assertEquals($object->ElementSummary(), $object->dbObject('Content')->Summary(20));
     }
 
     /**

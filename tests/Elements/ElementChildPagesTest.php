@@ -10,7 +10,7 @@ use SilverStripe\Forms\FieldList;
 class ElementChildPagesTest extends SapphireTest
 {
     /**
-     * Tests getCMSFields()
+     * Tests getCMSFields().
      */
     public function testGetCMSFields()
     {

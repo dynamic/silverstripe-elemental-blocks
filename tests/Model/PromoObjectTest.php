@@ -17,7 +17,7 @@ class PromoObjectTest extends SapphireTest
     protected static $fixture_file = '../fixtures.yml';
 
     /**
-     * Tests getCMSFields()
+     * Tests getCMSFields().
      */
     public function testGetCMSFields()
     {

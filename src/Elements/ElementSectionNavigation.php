@@ -5,12 +5,10 @@ namespace Dynamic\Elements\Elements;
 use DNADesign\Elemental\Models\BaseElement;
 
 /**
- * Class ElementSectionNavigation
- * @package Dynamic\Elements\Elements
+ * Class ElementSectionNavigation.
  */
 class ElementSectionNavigation extends BaseElement
 {
-
     /**
      * @var string
      */
@@ -45,6 +43,7 @@ class ElementSectionNavigation extends BaseElement
                 return false;
             }
         }
+
         return false;
     }
 }

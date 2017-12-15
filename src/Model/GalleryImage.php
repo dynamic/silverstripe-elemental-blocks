@@ -7,12 +7,10 @@ use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 
 /**
- * Class GalleryImage
- * @package Dynamic\Elements\Model
+ * Class GalleryImage.
  */
 class GalleryImage extends BaseElementObject
 {
-
     /**
      * @var string
      */
@@ -55,6 +53,11 @@ class GalleryImage extends BaseElementObject
     );
 
     /**
+     * @var string
+     */
+    private static $table_name = 'GalleryImage';
+
+    /**
      * @return FieldList
      */
     public function getCMSFields()
@@ -71,7 +74,7 @@ class GalleryImage extends BaseElementObject
     }
 
     /**
-     * @param null $member
+     * @param null  $member
      * @param array $context
      *
      * @return bool

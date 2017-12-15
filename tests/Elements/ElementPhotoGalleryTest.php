@@ -8,12 +8,10 @@ use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
 
 /**
- * Class ElementPhotoGallery
- * @package Dynamic\Elements\Tests
+ * Class ElementPhotoGallery.
  */
 class ElementPhotoGalleryTest extends SapphireTest
 {
-
     /**
      *
      */

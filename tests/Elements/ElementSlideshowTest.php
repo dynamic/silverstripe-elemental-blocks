@@ -13,7 +13,7 @@ class ElementSlideshowTest extends SapphireTest
     protected static $fixture_file = '../fixtures.yml';
 
     /**
-     * Tests getCMSFields()
+     * Tests getCMSFields().
      */
     public function testGetCMSFields()
     {
@@ -27,7 +27,7 @@ class ElementSlideshowTest extends SapphireTest
     public function testGetElementSummary()
     {
         $object = $this->objFromFixture(ElementSlideshow::class, 'one');
-        $this->assertEquals($object->ElementSummary(), $object->dbObject("Content")->Summary(20));
+        $this->assertEquals($object->ElementSummary(), $object->dbObject('Content')->Summary(20));
     }
 
     /**

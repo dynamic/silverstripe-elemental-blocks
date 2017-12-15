@@ -7,8 +7,7 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextareaField;
 
 /**
- * Class ElementEmbededCode
- * @package Dynamic\Elements\Elements
+ * Class ElementEmbededCode.
  */
 class ElementEmbeddedCode extends BaseElement
 {
@@ -50,6 +49,7 @@ class ElementEmbeddedCode extends BaseElement
             TextareaField::create('Code')
                 ->setTitle('Embed Code')
         );
+
         return $fields;
     }
 
@@ -58,6 +58,6 @@ class ElementEmbeddedCode extends BaseElement
      */
     public function getType()
     {
-        return _t(__CLASS__ . '.BlockType', 'Embedded Code');
+        return _t(__CLASS__.'.BlockType', 'Embedded Code');
     }
 }

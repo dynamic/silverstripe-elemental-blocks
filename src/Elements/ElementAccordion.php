@@ -7,7 +7,6 @@ use Dynamic\Elements\Model\AccordionPanel;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;
-use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\GridField\GridFieldDeleteAction;
 use SilverStripe\ORM\FieldType\DBField;
 use SilverStripe\ORM\FieldType\DBHTMLText;
@@ -18,12 +17,12 @@ class ElementAccordion extends BaseElement
     /**
      * @var string
      */
-    private static $singular_name = "Accordion";
+    private static $singular_name = 'Accordion';
 
     /**
      * @var string
      */
-    private static $plural_name = "Accordions";
+    private static $plural_name = 'Accordions';
 
     /**
      * @var string
@@ -33,7 +32,7 @@ class ElementAccordion extends BaseElement
     /**
      * @var string
      */
-    private static $description = "A collapsing list of content";
+    private static $description = 'A collapsing list of content';
 
     /**
      * @var array
@@ -54,9 +53,8 @@ class ElementAccordion extends BaseElement
      */
     public function getCMSFields()
     {
-
         $this->beforeUpdateCMSFields(function ($fields) {
-            /** @var FieldList $fields */
+            /* @var FieldList $fields */
             $fields->removeByName(array(
                 'Sort',
             ));
@@ -67,7 +65,7 @@ class ElementAccordion extends BaseElement
             if ($this->ID) {
                 /** @var GridField $panels */
                 $panels = $fields->dataFieldByName('Panels');
-                $panels->setTitle(_t(__CLASS__ . '.Panels', 'Panels'));
+                $panels->setTitle(_t(__CLASS__.'.Panels', 'Panels'));
 
                 $config = $panels->getConfig();
                 $config->addComponent(new GridFieldOrderableRows('Sort'));
@@ -93,6 +91,6 @@ class ElementAccordion extends BaseElement
      */
     public function getType()
     {
-        return _t(__CLASS__ . '.BlockType', 'Accordion');
+        return _t(__CLASS__.'.BlockType', 'Accordion');
     }
 }

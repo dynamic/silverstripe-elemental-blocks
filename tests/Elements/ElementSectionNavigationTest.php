@@ -2,20 +2,17 @@
 
 namespace Dynamic\Elements\Tests;
 
-use DNADesign\Elemental\Models\ElementalArea;
 use Dynamic\Elements\Elements\ElementSectionNavigation;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Dev\SapphireTest;
 
 /**
- * Class ElementSectionNavigationTest
- * @package Dynamic\Elements\Tests
+ * Class ElementSectionNavigationTest.
  */
 class ElementSectionNavigationTest extends SapphireTest
 {
-
     /**
-     * Tests getSectionNavigation()
+     * Tests getSectionNavigation().
      */
     public function testGetSectionNavigation()
     {

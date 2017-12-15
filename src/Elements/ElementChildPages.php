@@ -6,8 +6,7 @@ use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\FieldList;
 
 /**
- * Class ElementChildPages
- * @package Dynamic\Elements\Elements
+ * Class ElementChildPages.
  */
 class ElementChildPages extends BaseElement
 {
@@ -50,12 +49,12 @@ class ElementChildPages extends BaseElement
 
         return parent::getCMSFields();
     }
-    
+
     /**
      * @return string
      */
     public function getType()
     {
-        return _t(__CLASS__ . '.BlockType', 'Child Pages');
+        return _t(__CLASS__.'.BlockType', 'Child Pages');
     }
 }

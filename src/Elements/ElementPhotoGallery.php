@@ -12,8 +12,7 @@ use SilverStripe\Forms\GridField\GridFieldDeleteAction;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 /**
- * Class ElementPhotoGallery
- * @package Dynamic\Elements\Elements
+ * Class ElementPhotoGallery.
  */
 class ElementPhotoGallery extends BaseElement
 {
@@ -41,7 +40,7 @@ class ElementPhotoGallery extends BaseElement
      * @var array
      */
     private static $has_many = array(
-        'Images' => GalleryImage::class
+        'Images' => GalleryImage::class,
     );
 
     /**
@@ -62,6 +61,7 @@ class ElementPhotoGallery extends BaseElement
             $imagesField = GridField::create('Images', 'Images', $this->Images()->sort('SortOrder'), $config);
             $fields->addFieldToTab('Root.Photos', $imagesField);
         }
+
         return $fields;
     }
 
@@ -70,6 +70,6 @@ class ElementPhotoGallery extends BaseElement
      */
     public function getType()
     {
-        return _t(__CLASS__ . '.BlockType', 'Photo Gallery');
+        return _t(__CLASS__.'.BlockType', 'Photo Gallery');
     }
 }

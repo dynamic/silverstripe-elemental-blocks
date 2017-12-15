@@ -3,7 +3,6 @@
 namespace Dynamic\Elements\Tests;
 
 use Dynamic\Elements\Elements\ElementAccordion;
-use Dynamic\FlexSlider\Tests\TestPage;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
@@ -32,7 +31,7 @@ class ElementAccordionTest extends SapphireTest
     public function testGetElementSummary()
     {
         $object = $this->objFromFixture(ElementAccordion::class, 'one');
-        $this->assertEquals($object->ElementSummary(), $object->dbObject("Content")->Summary(20));
+        $this->assertEquals($object->ElementSummary(), $object->dbObject('Content')->Summary(20));
     }
 
     /**

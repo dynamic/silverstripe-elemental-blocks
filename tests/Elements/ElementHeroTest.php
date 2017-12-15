@@ -8,13 +8,12 @@ use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
 
 /**
- * Class ElementHeroTest
- * @package Dynamic\Elements\Tests
+ * Class ElementHeroTest.
  */
 class ElementHeroTest extends SapphireTest
 {
     /**
-     * Tests getCMSFields()
+     * Tests getCMSFields().
      */
     public function testGetCMSFields()
     {
@@ -23,7 +22,7 @@ class ElementHeroTest extends SapphireTest
     }
 
     /**
-     * Tests getType()
+     * Tests getType().
      */
     public function testGetType()
     {
