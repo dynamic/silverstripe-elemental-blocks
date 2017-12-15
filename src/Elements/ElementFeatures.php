@@ -10,6 +10,7 @@ use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\GridField\GridFieldDeleteAction;
 use SilverStripe\ORM\FieldType\DBField;
+use SilverStripe\ORM\FieldType\DBHTMLText;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 /**
@@ -85,7 +86,7 @@ class ElementFeatures extends BaseElement
     }
 
     /**
-     * @return HTMLText
+     * @return DBHTMLText
      */
     public function ElementSummary()
     {
