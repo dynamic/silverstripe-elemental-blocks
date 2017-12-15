@@ -6,8 +6,7 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextareaField;
 
 /**
- * Class ElementEmailSignup
- * @package Dynamic\Elements\Elements
+ * Class ElementEmailSignup.
  */
 class ElementEmailSignup extends ElementEmbeddedCode
 {
@@ -43,6 +42,7 @@ class ElementEmailSignup extends ElementEmbeddedCode
                 ->setTitle('Embed Code')
                 ->setRightTitle('Embed code for signup form')
         );
+
         return $fields;
     }
 
@@ -51,6 +51,6 @@ class ElementEmailSignup extends ElementEmbeddedCode
      */
     public function getType()
     {
-        return _t(__CLASS__ . '.BlockType', 'Email Signup');
+        return _t(__CLASS__.'.BlockType', 'Email Signup');
     }
 }

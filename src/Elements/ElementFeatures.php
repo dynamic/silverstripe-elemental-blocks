@@ -5,16 +5,14 @@ namespace Dynamic\Elements\Elements;
 use DNADesign\Elemental\Models\BaseElement;
 use Dynamic\Elements\Model\FeatureObject;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;
-use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\GridField\GridFieldDeleteAction;
 use SilverStripe\ORM\FieldType\DBField;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 /**
- * Class PageSectionBlock
+ * Class PageSectionBlock.
  *
  * @method HasManyList $Features
  */
@@ -98,6 +96,6 @@ class ElementFeatures extends BaseElement
      */
     public function getType()
     {
-        return _t(__CLASS__ . '.BlockType', 'Features');
+        return _t(__CLASS__.'.BlockType', 'Features');
     }
 }

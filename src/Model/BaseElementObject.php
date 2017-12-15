@@ -59,7 +59,7 @@ class BaseElementObject extends DataObject
     ];
 
     /**
-     * Adds Publish button
+     * Adds Publish button.
      *
      * @var bool
      */
@@ -89,7 +89,7 @@ class BaseElementObject extends DataObject
 
             $fields->dataFieldByName('Name')->setDescription('Required. For internal reference only');
 
-            $fields->dataFieldByName('Title')->setDescription("Optional. Display a Title with this feature.");
+            $fields->dataFieldByName('Title')->setDescription('Optional. Display a Title with this feature.');
 
             $image = $fields->dataFieldByName('Image')
                 ->setDescription('Optional. Display an image with this feature.')

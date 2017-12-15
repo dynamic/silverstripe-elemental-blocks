@@ -4,8 +4,6 @@ namespace Dynamic\Elements\Model;
 
 use Dynamic\Elements\Elements\ElementAccordion;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\HTMLEditor\TinyMCEConfig;
-use SilverStripe\View\Requirements;
 
 class AccordionPanel extends BaseElementObject
 {

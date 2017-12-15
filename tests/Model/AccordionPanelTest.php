@@ -5,7 +5,6 @@ namespace Dynamic\Elements\Tests;
 use Dynamic\Elements\Model\AccordionPanel;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\ORM\ValidationException;
 use SilverStripe\Security\Member;
 
 class AccordionPanelTest extends SapphireTest

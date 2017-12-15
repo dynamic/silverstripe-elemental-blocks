@@ -8,12 +8,10 @@ use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
 
 /**
- * Class ElementEmbeddedCodeTest
- * @package Dynamic\Elements\Tests
+ * Class ElementEmbeddedCodeTest.
  */
 class ElementEmbeddedCodeTest extends SapphireTest
 {
-
     /**
      *
      */

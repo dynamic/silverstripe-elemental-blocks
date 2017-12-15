@@ -8,14 +8,12 @@ use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
 
 /**
- * Class GallerImageTest
- * @package Dynamic\Elements\Tests
+ * Class GallerImageTest.
  */
 class GalleryImageTest extends SapphireTest
 {
-
     /**
-     * Tests getCMSFields()
+     * Tests getCMSFields().
      */
     public function testGetCMSFields()
     {
@@ -24,7 +22,7 @@ class GalleryImageTest extends SapphireTest
     }
 
     /**
-     * Tests canCreate()
+     * Tests canCreate().
      */
     public function testCanCreate()
     {
@@ -33,7 +31,7 @@ class GalleryImageTest extends SapphireTest
     }
 
     /**
-     * Tests canView()
+     * Tests canView().
      */
     public function testCanView()
     {
@@ -42,7 +40,7 @@ class GalleryImageTest extends SapphireTest
     }
 
     /**
-     * Tests canEdit()
+     * Tests canEdit().
      */
     public function testCanEdit()
     {
@@ -51,7 +49,7 @@ class GalleryImageTest extends SapphireTest
     }
 
     /**
-     * Tests canDelete()
+     * Tests canDelete().
      */
     public function testCanDelete()
     {

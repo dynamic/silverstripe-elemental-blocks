@@ -6,12 +6,10 @@ use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Assets\Image;
 
 /**
- * Class ElementImage
- * @package Dynamic\Elements\Elements
+ * Class ElementImage.
  */
 class ElementImage extends BaseElement
 {
-
     /**
      * @var string
      */
@@ -36,7 +34,7 @@ class ElementImage extends BaseElement
      * @var array
      */
     private static $has_one = array(
-      'Image' => Image::class
+      'Image' => Image::class,
     );
 
     /**
@@ -56,6 +54,6 @@ class ElementImage extends BaseElement
      */
     public function getType()
     {
-        return _t(__CLASS__ . '.BlockType', 'Image');
+        return _t(__CLASS__.'.BlockType', 'Image');
     }
 }

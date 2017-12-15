@@ -8,13 +8,12 @@ use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
 
 /**
- * Class ElementImageTest
- * @package Dynamic\Elements\Tests
+ * Class ElementImageTest.
  */
 class ElementImageTest extends SapphireTest
 {
     /**
-     * Tests getCMSFields()
+     * Tests getCMSFields().
      */
     public function testGetCMSFields()
     {
@@ -23,7 +22,7 @@ class ElementImageTest extends SapphireTest
     }
 
     /**
-     * Tests getType()
+     * Tests getType().
      */
     public function testGetType()
     {

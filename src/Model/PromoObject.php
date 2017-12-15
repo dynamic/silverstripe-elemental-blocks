@@ -10,8 +10,7 @@ use SilverStripe\Security\Permission;
 use SilverStripe\Security\Security;
 
 /**
- * Class PromoObject
- * @package Dynamic\PageBuildr\ORM
+ * Class PromoObject.
  */
 class PromoObject extends BaseElementObject
 {
@@ -29,7 +28,7 @@ class PromoObject extends BaseElementObject
      * @var array
      */
     private static $belongs_many_many = array(
-        'ElementPromos' => ElementPromos::class
+        'ElementPromos' => ElementPromos::class,
     );
 
     /**
@@ -75,11 +74,11 @@ class PromoObject extends BaseElementObject
      */
     public function canCreate($member = null, $context = [])
     {
-        if (! $member) {
+        if (!$member) {
             $member = Security::getCurrentUser();
         }
 
-        return Permission::checkMember($member, "EDIT_PROMOS_ELEMENT_PERMISSION", 'any');
+        return Permission::checkMember($member, 'EDIT_PROMOS_ELEMENT_PERMISSION', 'any');
     }
 
     /**
@@ -99,11 +98,11 @@ class PromoObject extends BaseElementObject
      */
     public function canEdit($member = null, $context = [])
     {
-        if (! $member) {
+        if (!$member) {
             $member = Security::getCurrentUser();
         }
 
-        return Permission::checkMember($member, "EDIT_PROMOS_ELEMENT_PERMISSION", 'any');
+        return Permission::checkMember($member, 'EDIT_PROMOS_ELEMENT_PERMISSION', 'any');
     }
 
     /**
@@ -113,10 +112,10 @@ class PromoObject extends BaseElementObject
      */
     public function canDelete($member = null, $context = [])
     {
-        if (! $member) {
+        if (!$member) {
             $member = Security::getCurrentUser();
         }
 
-        return Permission::checkMember($member, "EDIT_PROMOS_ELEMENT_PERMISSION", 'any');
+        return Permission::checkMember($member, 'EDIT_PROMOS_ELEMENT_PERMISSION', 'any');
     }
 }

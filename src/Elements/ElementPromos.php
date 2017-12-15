@@ -5,9 +5,7 @@ namespace Dynamic\Elements\Elements;
 use DNADesign\Elemental\Models\BaseElement;
 use Dynamic\Elements\Model\PromoObject;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;
-use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\ORM\FieldType\DBField;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use SilverStripe\Security\Permission;
@@ -17,8 +15,7 @@ use Symbiote\GridFieldExtensions\GridFieldAddExistingSearchButton;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 /**
- * Class PromosElement
- * @package Dynamic\PageBuildr\Elements
+ * Class PromosElement.
  */
 class ElementPromos extends BaseElement implements PermissionProvider
 {
@@ -117,7 +114,7 @@ class ElementPromos extends BaseElement implements PermissionProvider
      */
     public function getType()
     {
-        return _t(__CLASS__ . '.BlockType', 'Promos');
+        return _t(__CLASS__.'.BlockType', 'Promos');
     }
 
     /**
@@ -139,8 +136,8 @@ class ElementPromos extends BaseElement implements PermissionProvider
                     'ElementPromos.EDIT_PERMISSION_PROMOS_ELEMENT',
                     'Ability to edit Promos Elements.'
                 ),
-                'sort' => 400
-            )
+                'sort' => 400,
+            ),
         );
     }
 
@@ -156,7 +153,7 @@ class ElementPromos extends BaseElement implements PermissionProvider
      */
     public function canCreate($member = null, $context = [])
     {
-        if (! $member) {
+        if (!$member) {
             $member = Security::getCurrentUser();
         }
 
@@ -165,7 +162,7 @@ class ElementPromos extends BaseElement implements PermissionProvider
             return $extended;
         }
 
-        return Permission::checkMember($member, "EDIT_PROMOS_ELEMENT_PERMISSION", 'any');
+        return Permission::checkMember($member, 'EDIT_PROMOS_ELEMENT_PERMISSION', 'any');
     }
 
     /**
@@ -185,7 +182,7 @@ class ElementPromos extends BaseElement implements PermissionProvider
      */
     public function canEdit($member = null, $context = [])
     {
-        if (! $member) {
+        if (!$member) {
             $member = Security::getCurrentUser();
         }
 
@@ -194,7 +191,7 @@ class ElementPromos extends BaseElement implements PermissionProvider
             return $extended;
         }
 
-        return Permission::checkMember($member, "EDIT_PROMOS_ELEMENT_PERMISSION", 'any');
+        return Permission::checkMember($member, 'EDIT_PROMOS_ELEMENT_PERMISSION', 'any');
     }
 
     /**
@@ -204,7 +201,7 @@ class ElementPromos extends BaseElement implements PermissionProvider
      */
     public function canDelete($member = null, $context = [])
     {
-        if (! $member) {
+        if (!$member) {
             $member = Security::getCurrentUser();
         }
 
@@ -213,6 +210,6 @@ class ElementPromos extends BaseElement implements PermissionProvider
             return $extended;
         }
 
-        return Permission::checkMember($member, "EDIT_PROMOS_ELEMENT_PERMISSION", 'any');
+        return Permission::checkMember($member, 'EDIT_PROMOS_ELEMENT_PERMISSION', 'any');
     }
 }

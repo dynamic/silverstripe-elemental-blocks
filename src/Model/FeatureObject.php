@@ -6,7 +6,7 @@ use Dynamic\Elements\Elements\ElementFeatures;
 use SilverStripe\Forms\FieldList;
 
 /**
- * Class PageSectionObject
+ * Class PageSectionObject.
  *
  * @property int $Sort
  * @property int $ElementFeaturesID
