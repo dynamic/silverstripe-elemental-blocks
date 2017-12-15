@@ -55,6 +55,11 @@ class GalleryImage extends BaseElementObject
     );
 
     /**
+     * @var string
+     */
+    private static $table_name = 'GalleryImage';
+
+    /**
      * @return FieldList
      */
     public function getCMSFields()

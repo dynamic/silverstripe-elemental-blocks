@@ -33,6 +33,11 @@ class PromoObject extends BaseElementObject
     );
 
     /**
+     * @var string
+     */
+    private static $table_name = 'PromoObject';
+
+    /**
      * @return FieldList
      */
     public function getCMSFields()

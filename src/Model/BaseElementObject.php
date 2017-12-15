@@ -66,6 +66,11 @@ class BaseElementObject extends DataObject
     private static $versioned_gridfield_extensions = true;
 
     /**
+     * @var string
+     */
+    private static $table_name = 'BaseElementObject';
+
+    /**
      * @return \SilverStripe\Forms\FieldList
      */
     public function getCMSFields()

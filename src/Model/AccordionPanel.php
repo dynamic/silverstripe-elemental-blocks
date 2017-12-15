@@ -43,6 +43,11 @@ class AccordionPanel extends BaseElementObject
     private static $default_sort = 'Sort';
 
     /**
+     * @var string
+     */
+    private static $table_name = 'AccordionPanel';
+
+    /**
      * @return FieldList
      */
     public function getCMSFields()
