@@ -8,3 +8,6 @@ Dynamic\Elements\Elements\ElementSlideshow:
 Dynamic\FlexSlider\Model\SlideImage:
   extensions:
     - Dynamic\Elements\ORM\ElementSlideshowSlideDataExtension
+Dynamic\Elements\Model\BaseElementObject:
+  extensions:
+    - Dynamic\Elements\ORM\ElementPageLink
