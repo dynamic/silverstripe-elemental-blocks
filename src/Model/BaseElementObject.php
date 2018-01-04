@@ -28,6 +28,10 @@ class BaseElementObject extends DataObject
         'Image' => Image::class,
     );
 
+    private static $owns = array(
+        'Image'
+    );
+
     /**
      * @var string
      */
