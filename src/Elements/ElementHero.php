@@ -45,6 +45,13 @@ class ElementHero extends BaseElement
     );
 
     /**
+     * @var array
+     */
+    private static $owns = array(
+        'Image'
+    );
+
+    /**
      * @return \SilverStripe\Forms\FieldList
      */
     public function getCMSFields()

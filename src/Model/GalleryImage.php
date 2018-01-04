@@ -34,7 +34,14 @@ class GalleryImage extends BaseElementObject
      */
     private static $has_one = array(
         'PhotoGallery' => ElementPhotoGallery::class,
-        'Image' => Image::class,
+        // Image is covered by BaseElementObject
+    );
+
+    /**
+     * @var array
+     */
+    private static $owns = array(
+        'Image'
     );
 
     /**
@@ -71,8 +78,8 @@ class GalleryImage extends BaseElementObject
         $image = $fields->dataFieldByName('Image')->setFolderName('Uploads/Blocks/PhotoGallery/');
         $fields->insertBefore($image, 'Content');
 
-        $link = $fields->fieldByName('Root.Main.PageLink');
-        $fields->replaceField($link, new LiteralField('Root.Main.PageLink', ''));
+        // so if anything depends on PageLink it doesn't flake out
+        $fields->replaceField('PageLink', new LiteralField('PageLink', ''));
 
         return $fields;
     }
