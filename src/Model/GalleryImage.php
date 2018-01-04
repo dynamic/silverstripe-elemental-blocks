@@ -5,6 +5,7 @@ namespace Dynamic\Elements\Model;
 use Dynamic\Elements\Elements\ElementPhotoGallery;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\LiteralField;
 
 /**
  * Class GalleryImage.
@@ -69,6 +70,9 @@ class GalleryImage extends BaseElementObject
         ));
         $image = $fields->dataFieldByName('Image')->setFolderName('Uploads/Blocks/PhotoGallery/');
         $fields->insertBefore($image, 'Content');
+
+        $link = $fields->fieldByName('Root.Main.PageLink');
+        $fields->replaceField($link, new LiteralField('Root.Main.PageLink', ''));
 
         return $fields;
     }
