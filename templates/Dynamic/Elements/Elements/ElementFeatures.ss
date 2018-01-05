@@ -5,10 +5,10 @@
 		<% loop $FeaturesList %>
         	<div class="row form-group">
 				<% if $Image %>
-                <div class="col-md-4">
+                <div class="col-md-4<% if $Up.Alternate && $Even %> col-md-push-8<% end_if %>">
 					<img src="$Image.URL" class="img-responsive" alt="$Title.ATT">
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-8<% if $Up.Alternate && $Even %> col-md-pull-4<% end_if %>">
 				<% else %>
                 <div class="col-md-12">
 				<% end_if %>

@@ -43,6 +43,7 @@ class ElementFeatures extends BaseElement
      */
     private static $db = [
         'Content' => 'HTMLText',
+        'Alternate' => 'Boolean'
     ];
 
     /**
@@ -60,6 +61,7 @@ class ElementFeatures extends BaseElement
         $this->beforeUpdateCMSFields(function (FieldList $fields) {
             $fields->dataFieldByName('Content')
                 ->setRows(8);
+            $fields->dataFieldByName('Alternate')->setTitle('Alternate images and text');
 
             if ($this->ID) {
                 // Features
