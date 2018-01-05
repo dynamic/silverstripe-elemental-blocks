@@ -14,6 +14,12 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 class ElementAccordion extends BaseElement
 {
+
+    /**
+     * @var string
+     */
+    private static $icon = 'accordion-icon';
+
     /**
      * @var string
      */

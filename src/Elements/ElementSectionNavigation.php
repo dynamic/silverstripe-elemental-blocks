@@ -12,7 +12,7 @@ class ElementSectionNavigation extends BaseElement
     /**
      * @var string
      */
-    private static $icon = 'vendor/dnadesign/silverstripe-elemental/images/base.svg';
+    private static $icon = 'sectionnav-icon';
 
     /**
      * @var string

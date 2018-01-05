@@ -11,7 +11,7 @@ class ElementSlideshow extends BaseElement
     /**
      * @var string
      */
-    private static $icon = 'vendor/dnadesign/silverstripe-elemental/images/base.svg';
+    private static $icon = 'slideshow-icon';
 
     /**
      * @var string
