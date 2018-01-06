@@ -35,7 +35,7 @@ class BaseElementObject extends DataObject
      * @var array
      */
     private static $owns = array(
-        'Image'
+        'Image',
     );
 
     /**
@@ -82,6 +82,7 @@ class BaseElementObject extends DataObject
 
     /**
      * @return FieldList
+     *
      * @throws \Exception
      */
     public function getCMSFields()

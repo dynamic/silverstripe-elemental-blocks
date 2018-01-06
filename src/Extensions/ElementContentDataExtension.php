@@ -31,9 +31,9 @@ class ElementContentDataExtension extends DataExtension
         );
         $fields->insertBefore($fields->dataFieldByName('ElementLinkID'), 'HTML');
 
-            $image = $fields->dataFieldByName('Image')
+        $image = $fields->dataFieldByName('Image')
                 ->setDescription('Optional. Display an image with this content.')
                 ->setFolderName('Uploads/Elements/Content');
-            $fields->insertBefore($image, 'HTML');
+        $fields->insertBefore($image, 'HTML');
     }
 }

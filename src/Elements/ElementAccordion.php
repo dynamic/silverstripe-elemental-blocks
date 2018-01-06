@@ -14,7 +14,6 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 class ElementAccordion extends BaseElement
 {
-
     /**
      * @var string
      */

@@ -41,7 +41,7 @@ class GalleryImage extends BaseElementObject
      * @var array
      */
     private static $owns = array(
-        'Image'
+        'Image',
     );
 
     /**
@@ -67,6 +67,7 @@ class GalleryImage extends BaseElementObject
 
     /**
      * @return FieldList
+     *
      * @throws \Exception
      */
     public function getCMSFields()
