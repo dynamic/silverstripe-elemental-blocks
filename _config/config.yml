@@ -12,3 +12,6 @@ Sheadawson\Linkable\Models\Link:
   templates:
     button: 'Display link as a button'
     buttonghost: 'Display link as a ghost button'
+DNADesign\Elemental\Models\ElementContent:
+  extensions:
+    - Dynamic\Elements\ORM\ElementContentDataExtension

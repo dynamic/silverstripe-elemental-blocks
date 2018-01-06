@@ -5,6 +5,7 @@ namespace Dynamic\Elements\Model;
 use Sheadawson\Linkable\Forms\LinkField;
 use Sheadawson\Linkable\Models\Link;
 use SilverStripe\Assets\Image;
+use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\HTMLEditor\TinyMCEConfig;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\ValidationResult;
@@ -80,13 +81,13 @@ class BaseElementObject extends DataObject
     private static $table_name = 'BaseElementObject';
 
     /**
-     * @return \SilverStripe\Forms\FieldList
+     * @return FieldList
      * @throws \Exception
      */
     public function getCMSFields()
     {
         $this->beforeUpdateCMSFields(function ($fields) {
-            $link = $fields->replaceField(
+            $fields->replaceField(
                 'ElementLinkID',
                 LinkField::create('ElementLinkID')
                     ->setTitle('Link')
