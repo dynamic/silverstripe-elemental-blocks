@@ -49,6 +49,7 @@ class FeatureObject extends BaseElementObject
 
     /**
      * @return FieldList
+     * @throws \Exception
      */
     public function getCMSFields()
     {

@@ -10,7 +10,7 @@
                         <img src="$Image.URL" class="img-responsive" alt="$Title.ATT">
                     <% end_if %>
                     $Content
-                    <% if $PageLink %>$PageLink<% end_if %>
+                    <% if $ElementLink %>$ElementLink<% end_if %>
                 </div>
             <% end_loop %>
         </div>

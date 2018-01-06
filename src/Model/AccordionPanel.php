@@ -47,6 +47,7 @@ class AccordionPanel extends BaseElementObject
 
     /**
      * @return FieldList
+     * @throws \Exception
      */
     public function getCMSFields()
     {
