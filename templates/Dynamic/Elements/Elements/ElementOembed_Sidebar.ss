@@ -1,4 +1,5 @@
-<div class="$CSSClasses grid">
+<div class="$ExtraClass">
+    <% if $ShowTitle %><h3>$Title</h3><% end_if %>
 	<% if $EmbeddedObject %>
         <div class="promo relative">
 			<% if $EmbeddedObject.ThumbURL %>

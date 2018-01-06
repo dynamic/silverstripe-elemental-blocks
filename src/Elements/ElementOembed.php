@@ -40,7 +40,8 @@ class ElementOembed extends BaseElement
     /**
      * @return FieldList
      */
-    public function getCMSFields(){
+    public function getCMSFields()
+    {
         $fields = parent::getCMSFields();
 
         $fields->replaceField(
