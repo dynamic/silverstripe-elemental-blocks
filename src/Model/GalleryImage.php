@@ -76,7 +76,7 @@ class GalleryImage extends BaseElementObject
             'SortOrder',
             'PhotoGalleryID',
         ));
-        $image = $fields->dataFieldByName('Image')->setFolderName('Uploads/Blocks/PhotoGallery/');
+        $image = $fields->dataFieldByName('Image')->setFolderName('Uploads/Elements/PhotoGallery/');
         $fields->insertBefore($image, 'Content');
 
         // so if anything depends on PageLink it doesn't flake out
