@@ -14,7 +14,7 @@
 				<% end_if %>
 					<% if $Title %><div class='block_title'><h4>$Title</h4></div><% end_if %>
 					<% if $Content %><div class='block_content'>$Content</div><% end_if %>
-					<p>link = <% if $PageLink %>$PageLink<% end_if %></p>
+					<% if $ElementLink %><p>$ElementLink</p><% end_if %>
                 </div>
         	</div>
 		<% end_loop %>

@@ -67,6 +67,7 @@ class GalleryImage extends BaseElementObject
 
     /**
      * @return FieldList
+     * @throws \Exception
      */
     public function getCMSFields()
     {

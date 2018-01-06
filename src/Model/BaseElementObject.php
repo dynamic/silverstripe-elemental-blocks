@@ -2,6 +2,8 @@
 
 namespace Dynamic\Elements\Model;
 
+use Sheadawson\Linkable\Forms\LinkField;
+use Sheadawson\Linkable\Models\Link;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\HTMLEditor\TinyMCEConfig;
 use SilverStripe\ORM\DataObject;
@@ -17,7 +19,6 @@ class BaseElementObject extends DataObject
     private static $db = array(
         'Name' => 'Varchar(255)',
         'Title' => 'Varchar(255)',
-        'PageLink' => 'Link',
         'Content' => 'HTMLText',
     );
 
@@ -26,8 +27,12 @@ class BaseElementObject extends DataObject
      */
     private static $has_one = array(
         'Image' => Image::class,
+        'ElementLink' => Link::class,
     );
 
+    /**
+     * @var array
+     */
     private static $owns = array(
         'Image'
     );
@@ -76,15 +81,18 @@ class BaseElementObject extends DataObject
 
     /**
      * @return \SilverStripe\Forms\FieldList
+     * @throws \Exception
      */
     public function getCMSFields()
     {
         $this->beforeUpdateCMSFields(function ($fields) {
-            $fields->removeByName('PageLinkID');
-            $link = $fields->fieldByName('Root.Main.PageLink')
-                ->setDescription('Optional. Link to a Page')
-            ;
-            $fields->insertBefore('Content', $link);
+            $link = $fields->replaceField(
+                'ElementLinkID',
+                LinkField::create('ElementLinkID')
+                    ->setTitle('Link')
+                    ->setDescription('Optional. Add a call to action link.')
+            );
+            $fields->insertBefore($fields->dataFieldByName('ElementLinkID'), 'Content');
 
             $fields->removeByName(array(
                 'ElementFeaturesID',
