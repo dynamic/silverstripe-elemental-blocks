@@ -15,8 +15,8 @@
     "license": "BSD-3-Clause",
     "repositories": [
         {
-            "type": "vcs",
-            "url": "git@github.com:SilverStripers/silverstripe-display-logic.git"
+            "type": "git",
+            "url": "https://github.com/SilverStripers/silverstripe-display-logic.git"
         }
     ],
     "require": {
