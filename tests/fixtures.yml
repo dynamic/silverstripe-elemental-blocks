@@ -70,3 +70,7 @@ Dynamic\Elements\Elements\ElementSlideshow:
   one:
     Title: 'Slideshow'
     Slides: =>Dynamic\FlexSlider\Model\SlideImage.default
+
+DNADesign\Elemental\Models\ElementContent:
+  default:
+    Title: 'Content'
