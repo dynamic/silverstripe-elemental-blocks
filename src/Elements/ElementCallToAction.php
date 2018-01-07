@@ -6,7 +6,6 @@ use DNADesign\Elemental\Models\BaseElement;
 use Sheadawson\Linkable\Forms\LinkField;
 use Sheadawson\Linkable\Models\Link;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\ORM\FieldType\DBField;
 
 class ElementCallToAction extends BaseElement
 {

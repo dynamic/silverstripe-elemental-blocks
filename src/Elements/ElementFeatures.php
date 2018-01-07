@@ -43,7 +43,7 @@ class ElementFeatures extends BaseElement
      */
     private static $db = [
         'Content' => 'HTMLText',
-        'Alternate' => 'Boolean'
+        'Alternate' => 'Boolean',
     ];
 
     /**
