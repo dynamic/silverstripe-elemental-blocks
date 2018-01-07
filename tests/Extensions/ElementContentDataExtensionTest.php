@@ -3,7 +3,6 @@
 namespace Dynamic\Elements\Tests;
 
 use DNADesign\Elemental\Models\ElementContent;
-use Dynamic\FlexSlider\Model\SlideImage;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\FieldList;
 

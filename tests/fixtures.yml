@@ -78,3 +78,7 @@ DNADesign\Elemental\Models\ElementContent:
 Dynamic\Elements\Elements\ElementOembed:
   one:
     Title: 'oEmbed Element'
+
+Dynamic\Elements\Elements\ElementCallToAction:
+  one:
+    Title: 'Call To Action'

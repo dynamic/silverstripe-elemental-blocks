@@ -38,6 +38,7 @@ class PromoObject extends BaseElementObject
 
     /**
      * @return FieldList
+     *
      * @throws \Exception
      */
     public function getCMSFields()

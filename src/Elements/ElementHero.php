@@ -48,7 +48,7 @@ class ElementHero extends BaseElement
      * @var array
      */
     private static $owns = array(
-        'Image'
+        'Image',
     );
 
     /**
