@@ -3,6 +3,8 @@
 namespace Dynamic\Elements\Elements;
 
 use DNADesign\Elemental\Models\BaseElement;
+use SilverStripe\ORM\FieldType\DBField;
+use SilverStripe\ORM\FieldType\DBHTMLText;
 
 /**
  * Class ElementSectionNavigation.
@@ -45,5 +47,21 @@ class ElementSectionNavigation extends BaseElement
         }
 
         return false;
+    }
+
+    /**
+     * @return DBHTMLText
+     */
+    public function ElementSummary()
+    {
+        return DBField::create_field('HTMLText', '<p>Section Navigation</p>')->Summary(20);
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return _t(__CLASS__.'.BlockType', 'Section Navigation');
     }
 }
