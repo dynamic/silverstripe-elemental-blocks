@@ -60,6 +60,7 @@ class ElementOembed extends BaseElement
         if ($this->EmbeddedObject()->ID) {
             return DBField::create_field('HTMLText', $this->EmbeddedObject->Description)->Summary(20);
         }
+
         return DBField::create_field('HTMLText', '<p>External Content</p>')->Summary(20);
     }
 
