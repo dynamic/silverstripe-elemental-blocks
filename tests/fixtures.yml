@@ -46,6 +46,10 @@ Dynamic\Elements\Elements\ElementAccordion:
     Content: "<p>Biography overview lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>"
     Panels: =>Dynamic\Elements\Model\AccordionPanel.one, =>Dynamic\Elements\Model\AccordionPanel.two
 
+Dynamic\Elements\Elements\ElementCustomerService:
+  one:
+    Title: "Customer Service"
+
 Dynamic\Elements\Elements\ElementFeatures:
   one:
     Title: "Intro"

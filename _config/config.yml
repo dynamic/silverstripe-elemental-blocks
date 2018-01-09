@@ -1,7 +1,9 @@
 ---
 Name: dynamicelementsconfig
 ---
-
+Dynamic\Elements\Elements\ElementCustomerService:
+  extensions:
+    - Dynamic\SilverStripeGeocoder\AddressDataExtension
 Dynamic\Elements\Elements\ElementSlideshow:
   extensions:
     - Dynamic\FlexSlider\ORM\FlexSlider
