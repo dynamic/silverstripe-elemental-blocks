@@ -21,7 +21,7 @@ class ElementFeatures extends BaseElement
     /**
      * @var string
      */
-    private static $icon = 'vendor/dnadesign/silverstripe-elemental/images/base.svg';
+    private static $icon = 'font-icon-block-banner';
 
     /**
      * @return string

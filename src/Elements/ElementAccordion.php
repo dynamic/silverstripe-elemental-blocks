@@ -17,6 +17,11 @@ class ElementAccordion extends BaseElement
     /**
      * @var string
      */
+    private static $icon = 'accordion-icon';
+
+    /**
+     * @var string
+     */
     private static $singular_name = 'Accordion';
 
     /**

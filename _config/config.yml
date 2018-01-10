@@ -15,3 +15,6 @@ Sheadawson\Linkable\Models\Link:
 DNADesign\Elemental\Models\ElementContent:
   extensions:
     - Dynamic\Elements\ORM\ElementContentDataExtension
+SilverStripe\Admin\LeftAndMain:
+  extensions:
+    - Dynamic\Elements\Extensions\LeftAndMainExtension
