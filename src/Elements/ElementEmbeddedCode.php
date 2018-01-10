@@ -14,7 +14,7 @@ class ElementEmbeddedCode extends BaseElement
     /**
      * @var string
      */
-    private static $icon = 'embed-icon';
+    private static $icon = 'code-icon';
 
     /**
      * @var string
