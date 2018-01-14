@@ -40,6 +40,3 @@ Elemental Blocks will add the following Elements to your site:
 * Section Navigation
 * Slideshow
 
-## Documentation
-
-See the [docs/en](docs/en/index.md) folder.
