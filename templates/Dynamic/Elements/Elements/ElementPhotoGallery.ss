@@ -25,6 +25,6 @@
         </div>
     </div>
 </div>
-<% require css('dynamic/dynamic-elements: thirdparty/lightbox/lightbox.css') %>
+<% require css('dynamic/silverstripe-elemental-blocks: thirdparty/lightbox/lightbox.css') %>
 <% require javascript('silverstripe/admin: thirdparty/jquery/jquery.js') %>
-<% require javascript('dynamic/dynamic-elements: thirdparty/lightbox/lightbox.min.js') %>
+<% require javascript('dynamic/silverstripe-elemental-blocks: thirdparty/lightbox/lightbox.min.js') %>
