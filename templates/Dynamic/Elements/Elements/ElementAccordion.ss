@@ -17,9 +17,9 @@
     <% end_if %>
 </div>
 
-<% require css('dynamic/dynamic-elements: thirdparty/jquery-ui/jquery-ui.min.css') %>
+<% require css('dynamic/silverstripe-elemental-blocks: thirdparty/jquery-ui/jquery-ui.min.css') %>
 <% require javascript('silverstripe/admin: thirdparty/jquery/jquery.js') %>
-<% require javascript('dynamic/dynamic-elements: thirdparty/jquery-ui/jquery-ui.min.js') %>
+<% require javascript('dynamic/silverstripe-elemental-blocks: thirdparty/jquery-ui/jquery-ui.min.js') %>
 <% require customScript('jQuery("document").ready(function() {
         var accordions = jQuery(".accordion");
         if (accordions.length > 0) {
