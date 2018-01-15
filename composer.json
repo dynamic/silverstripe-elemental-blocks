@@ -1,6 +1,6 @@
 {
-    "name": "dynamic/dynamic-elements",
-    "description": "Custom elements that work with SilverStripe Elemental module",
+    "name": "dynamic/silverstripe-elemental-blocks",
+    "description": "Additional elements for the SilverStripe Elemental module",
     "authors": [
         {
             "name": "Dynamic",
@@ -9,7 +9,9 @@
         }
     ],
     "keywords": [
-        "silverstripe"
+        "silverstripe",
+        "elemental",
+        "blocks"
     ],
     "type": "silverstripe-vendormodule",
     "license": "BSD-3-Clause",
@@ -25,7 +27,6 @@
         "dynamic/flexslider": "^3.0@dev",
         "dynamic/silverstripe-geocoder": "^1@dev",
         "dnadesign/silverstripe-elemental": "^2@dev",
-        "silverstripe/elemental-blocks": "^1.0@dev",
         "unclecheese/display-logic": "dev-ss4-upgrade",
         "sheadawson/silverstripe-linkable": "^2.0@dev"
     },
@@ -46,7 +47,8 @@
     "prefer-stable": true,
     "extra": {
         "expose": [
-            "thirdparty"
+            "thirdparty",
+            "icons"
         ],
         "branch-alias": {
             "dev-master": "2.0.x-dev"

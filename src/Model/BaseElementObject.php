@@ -118,11 +118,6 @@ class BaseElementObject extends DataObject
             ;
         });
 
-        // Ensure TinyMCE's javascript is loaded before the blocks overrides
-        Requirements::javascript(TinyMCEConfig::get('cms')->getScriptURL());
-        Requirements::javascript('silverstripe/elemental-blocks:client/dist/js/bundle.js');
-        Requirements::css('silverstripe/elemental-blocks:client/dist/styles/bundle.css');
-
         return parent::getCMSFields();
     }
 
