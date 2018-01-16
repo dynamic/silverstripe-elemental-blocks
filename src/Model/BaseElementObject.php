@@ -106,6 +106,7 @@ class BaseElementObject extends DataObject
             $fields->dataFieldByName('Title')->setDescription('Optional. Display a Title with this feature.');
 
             $image = $fields->dataFieldByName('Image')
+                ->setAllowedFileCategories(['image'])
                 ->setDescription('Optional. Display an image with this feature.')
                 ->setFolderName('Uploads/Elements/Objects')
             ;
