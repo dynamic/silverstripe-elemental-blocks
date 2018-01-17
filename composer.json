@@ -25,6 +25,7 @@
         "silverstripe/recipe-cms": "^1.0@dev",
         "silverstripe/vendor-plugin": "^1.0@dev",
         "dynamic/flexslider": "^3.0@dev",
+        "dynamic/silverstripe-geocoder": "^1@dev",
         "dnadesign/silverstripe-elemental": "^2@dev",
         "unclecheese/display-logic": "dev-ss4-upgrade",
         "sheadawson/silverstripe-linkable": "^2.0@dev"
