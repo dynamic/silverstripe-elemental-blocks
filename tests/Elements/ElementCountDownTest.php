@@ -28,9 +28,10 @@ class ElementCountDownTest extends SapphireTest
     }
 
     /**
-     * 
+     *
      */
-    public function testGetCountDownJS() {
+    public function testGetCountDownJS()
+    {
         $requirements = Requirements::get_custom_scripts();
         $this->assertArrayNotHasKey('countDownCustom', $requirements);
 

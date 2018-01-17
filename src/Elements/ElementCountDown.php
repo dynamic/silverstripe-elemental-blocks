@@ -49,13 +49,14 @@ class ElementCountDown extends BaseElement
      */
     public function getType()
     {
-        return _t(__CLASS__.'.BlockType', 'Count Down');
+        return _t(__CLASS__ . '.BlockType', 'Count Down');
     }
 
     /**
      * Adds a custom requirement.
      */
-    public function getCountDownJS() {
+    public function getCountDownJS()
+    {
         // switches out which day count to get off the event
         $dayVar = 'totalDays';
         if ($this->ShowMonths && $this->ShowDays) {
@@ -63,7 +64,7 @@ class ElementCountDown extends BaseElement
         }
 
         Requirements::customScript(
-<<<JS
+            <<<JS
     jQuery('#countdown-$this->ID').countdown('$this->End', {
         elapse: $this->Elapse
     }).on('update.countdown', function(event) {
@@ -74,6 +75,8 @@ class ElementCountDown extends BaseElement
         $(this).find('.seconds').html(event.offset.seconds);
     });
 JS
-, 'countDownCustom');
+            ,
+            'countDownCustom'
+        );
     }
 }
