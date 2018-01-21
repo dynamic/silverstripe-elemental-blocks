@@ -4,19 +4,20 @@ Name: dynamicelementsconfig
 Dynamic\Elements\Elements\ElementCustomerService:
   extensions:
     - Dynamic\SilverStripeGeocoder\AddressDataExtension
+
 Dynamic\Elements\Elements\ElementSlideshow:
   extensions:
     - Dynamic\FlexSlider\ORM\FlexSlider
+
 Dynamic\FlexSlider\Model\SlideImage:
   extensions:
     - Dynamic\Elements\ORM\ElementSlideshowSlideDataExtension
+
 Sheadawson\Linkable\Models\Link:
   templates:
     button: 'Display link as a button'
     buttonghost: 'Display link as a ghost button'
-DNADesign\Elemental\Models\ElementContent:
-  extensions:
-    - Dynamic\Elements\ORM\ElementContentDataExtension
+
 SilverStripe\Admin\LeftAndMain:
   extensions:
     - Dynamic\Elements\Extensions\LeftAndMainExtension
