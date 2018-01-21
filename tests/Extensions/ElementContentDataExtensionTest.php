@@ -15,14 +15,21 @@ class ElementContentDataExtensionTest extends SapphireTest
     protected static $fixture_file = '../fixtures.yml';
 
     /**
+     * @var array
+     */
+    protected static $required_extensions = [
+        ElementContent::class => [
+            ElementContentDataExtension::class,
+        ],
+    ];
+
+    /**
      *
      */
     public function testGetCMSFields()
     {
         $object = $this->objFromFixture(ElementContent::class, 'default');
-        $ext = new ElementContentDataExtension();
         $fields = $object->getCMSFields();
-        $fields = $ext->updateCMSFields($fields);
         $this->assertInstanceOf(FieldList::class, $fields);
     }
 }
