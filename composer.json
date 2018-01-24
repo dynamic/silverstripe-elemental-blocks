@@ -1,6 +1,13 @@
 {
     "name": "dynamic/silverstripe-elemental-blocks",
+    "type": "silverstripe-vendormodule",
     "description": "Additional elements for the SilverStripe Elemental module",
+    "keywords": [
+        "silverstripe",
+        "elemental",
+        "blocks"
+    ],
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "Dynamic",
@@ -8,43 +15,22 @@
             "homepage": "http://www.dynamicagency.com"
         }
     ],
-    "keywords": [
-        "silverstripe",
-        "elemental",
-        "blocks"
-    ],
-    "type": "silverstripe-vendormodule",
-    "license": "BSD-3-Clause",
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/SilverStripers/silverstripe-display-logic.git"
-        }
-    ],
     "require": {
-        "silverstripe/recipe-cms": "^1.0@dev",
-        "silverstripe/vendor-plugin": "^1.0@dev",
+        "dnadesign/silverstripe-elemental": "^2@dev",
         "dynamic/flexslider": "^3.0@dev",
         "dynamic/silverstripe-geocoder": "^1@dev",
-        "dnadesign/silverstripe-elemental": "^2@dev",
-        "unclecheese/display-logic": "dev-ss4-upgrade",
-        "sheadawson/silverstripe-linkable": "^2.0@dev"
+        "sheadawson/silverstripe-linkable": "^2.0@dev",
+        "silverstripe/recipe-cms": "^1.0@dev",
+        "silverstripe/vendor-plugin": "^1.0@dev",
+        "unclecheese/display-logic": "dev-ss4-upgrade"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7",
         "squizlabs/php_codesniffer": "*"
     },
-    "autoload": {
-        "psr-4": {
-            "Dynamic\\Elements\\": "src/",
-            "Dynamic\\Elements\\Tests\\": "tests/"
-        }
-    },
     "config": {
         "process-timeout": 600
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "extra": {
         "expose": [
             "thirdparty",
@@ -54,6 +40,20 @@
             "dev-master": "2.0.x-dev"
         }
     },
+    "autoload": {
+        "psr-4": {
+            "Dynamic\\Elements\\": "src/",
+            "Dynamic\\Elements\\Tests\\": "tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/SilverStripers/silverstripe-display-logic.git"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "scripts": {
         "lint": "vendor/bin/phpcs src/ tests/",
         "lint-clean": "vendor/bin/phpcbf src/ tests/"
