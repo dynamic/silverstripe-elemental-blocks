@@ -6,8 +6,6 @@ use Dynamic\Elements\Elements\ElementPromos;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordViewer;
-use SilverStripe\Security\Permission;
-use SilverStripe\Security\Security;
 
 /**
  * Class PromoObject.
@@ -62,62 +60,5 @@ class PromoObject extends BaseElementObject
         });
 
         return parent::getCMSFields();
-    }
-
-    /**
-     * Set permissions, allow all users to access by default.
-     * Override in descendant classes, or use PermissionProvider.
-     */
-
-    /**
-     * @param null $member
-     *
-     * @return bool
-     */
-    public function canCreate($member = null, $context = [])
-    {
-        if (!$member) {
-            $member = Security::getCurrentUser();
-        }
-
-        return Permission::checkMember($member, 'EDIT_PROMOS_ELEMENT_PERMISSION', 'any');
-    }
-
-    /**
-     * @param null $member
-     *
-     * @return bool
-     */
-    public function canView($member = null, $context = [])
-    {
-        return true;
-    }
-
-    /**
-     * @param null $member
-     *
-     * @return bool
-     */
-    public function canEdit($member = null, $context = [])
-    {
-        if (!$member) {
-            $member = Security::getCurrentUser();
-        }
-
-        return Permission::checkMember($member, 'EDIT_PROMOS_ELEMENT_PERMISSION', 'any');
-    }
-
-    /**
-     * @param null $member
-     *
-     * @return bool
-     */
-    public function canDelete($member = null, $context = [])
-    {
-        if (!$member) {
-            $member = Security::getCurrentUser();
-        }
-
-        return Permission::checkMember($member, 'EDIT_PROMOS_ELEMENT_PERMISSION', 'any');
     }
 }

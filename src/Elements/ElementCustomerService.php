@@ -7,12 +7,10 @@ use SilverStripe\Forms\EmailField;
 use SilverStripe\Forms\FieldList;
 
 /**
- * Class ElementCustomerService
- * @package Dynamic\Elements\Elements
+ * Class ElementCustomerService.
  */
 class ElementCustomerService extends BaseElement
 {
-
     /**
      * @var string
      */
