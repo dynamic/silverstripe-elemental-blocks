@@ -9,6 +9,22 @@ SilverStripe\Security\Permission:
     Code: ADMIN
     Type: 1
     Group: =>SilverStripe\Security\Group.administrators
+  element-create:
+    Code: Create_Element
+    Type: 1
+    Group: =>SilverStripe\Security\Group.site-owners
+  element-edit:
+    Code: Edit_Element
+    Type: 1
+    Group: =>SilverStripe\Security\Group.site-owners
+  element-delete:
+    Code: Delete_Element
+    Type: 1
+    Group: =>SilverStripe\Security\Group.site-owners
+  element-publish:
+    Code: Publish_Element
+    Type: 1
+    Group: =>SilverStripe\Security\Group.site-owners
 
 SilverStripe\Security\Member:
   admin:

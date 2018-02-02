@@ -64,44 +64,4 @@ class AccordionPanel extends BaseElementObject
 
         return parent::getCMSFields();
     }
-
-    /**
-     * @param null $member
-     *
-     * @return bool
-     */
-    public function canCreate($member = null, $context = [])
-    {
-        return true;
-    }
-
-    /**
-     * @param null $member
-     *
-     * @return bool
-     */
-    public function canView($member = null, $context = [])
-    {
-        return true;
-    }
-
-    /**
-     * @param null $member
-     *
-     * @return bool
-     */
-    public function canEdit($member = null, $context = [])
-    {
-        return true;
-    }
-
-    /**
-     * @param null $member
-     *
-     * @return bool
-     */
-    public function canDelete($member = null, $context = [])
-    {
-        return true;
-    }
 }

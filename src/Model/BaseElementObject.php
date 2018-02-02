@@ -6,12 +6,13 @@ use Sheadawson\Linkable\Forms\LinkField;
 use Sheadawson\Linkable\Models\Link;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\HTMLEditor\TinyMCEConfig;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\ValidationResult;
 use SilverStripe\Versioned\Versioned;
-use SilverStripe\View\Requirements;
 
+/**
+ * Class BaseElementObject.
+ */
 class BaseElementObject extends DataObject
 {
     /**
