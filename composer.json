@@ -22,7 +22,7 @@
         "sheadawson/silverstripe-linkable": "^2.0@dev",
         "silverstripe/recipe-cms": "^1.0@dev",
         "silverstripe/vendor-plugin": "^1.0@dev",
-        "unclecheese/display-logic": "dev-ss4-upgrade"
+        "unclecheese/display-logic": "^2.0@dev"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7",
@@ -46,12 +46,6 @@
             "Dynamic\\Elements\\Tests\\": "tests/"
         }
     },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/SilverStripers/silverstripe-display-logic.git"
-        }
-    ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
