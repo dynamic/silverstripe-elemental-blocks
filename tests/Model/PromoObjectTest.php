@@ -24,4 +24,72 @@ class PromoObjectTest extends SapphireTest
         $promo = Injector::inst()->create(PromoObject::class);
         $this->assertInstanceOf(FieldList::class, $promo->getCMSFields());
     }
+
+    /**
+     *
+     */
+    public function testCanView()
+    {
+        $object = $this->objFromFixture(PromoObject::class, 'one');
+
+        $admin = $this->objFromFixture(Member::class, 'admin');
+        $this->assertTrue($object->canView($admin));
+
+        $siteowner = $this->objFromFixture(Member::class, 'site-owner');
+        $this->assertTrue($object->canView($siteowner));
+
+        $member = $this->objFromFixture(Member::class, 'default');
+        $this->assertFalse($object->canView($member));
+    }
+
+    /**
+     *
+     */
+    public function testCanEdit()
+    {
+        $object = $this->objFromFixture(PromoObject::class, 'one');
+
+        $admin = $this->objFromFixture(Member::class, 'admin');
+        $this->assertTrue($object->canEdit($admin));
+
+        $siteowner = $this->objFromFixture(Member::class, 'site-owner');
+        $this->assertTrue($object->canEdit($siteowner));
+
+        $member = $this->objFromFixture(Member::class, 'default');
+        $this->assertNull($object->canEdit($member));
+    }
+
+    /**
+     *
+     */
+    public function testCanDelete()
+    {
+        $object = $this->objFromFixture(PromoObject::class, 'one');
+
+        $admin = $this->objFromFixture(Member::class, 'admin');
+        $this->assertTrue($object->canDelete($admin));
+
+        $siteowner = $this->objFromFixture(Member::class, 'site-owner');
+        $this->assertTrue($object->canDelete($siteowner));
+
+        $member = $this->objFromFixture(Member::class, 'default');
+        $this->assertNull($object->canDelete($member));
+    }
+
+    /**
+     *
+     */
+    public function testCanCreate()
+    {
+        $object = $this->objFromFixture(PromoObject::class, 'one');
+
+        $admin = $this->objFromFixture(Member::class, 'admin');
+        $this->assertTrue($object->canCreate($admin));
+
+        $siteowner = $this->objFromFixture(Member::class, 'site-owner');
+        $this->assertTrue($object->canCreate($siteowner));
+
+        $member = $this->objFromFixture(Member::class, 'default');
+        $this->assertNull($object->canCreate($member));
+    }
 }
