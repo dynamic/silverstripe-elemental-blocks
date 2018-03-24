@@ -75,7 +75,7 @@ class FeatureObject extends BaseElementObject
         $page = null;
 
         if ($this->ElementFeatures()) {
-            if($this->ElementFeatures()->hasMethod('getPage')) {
+            if ($this->ElementFeatures()->hasMethod('getPage')) {
                 $page = $this->ElementFeatures()->getPage();
             }
         }

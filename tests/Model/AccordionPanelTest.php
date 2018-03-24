@@ -56,7 +56,7 @@ class AccordionPanelTest extends SapphireTest
         $this->assertTrue($object->canEdit($siteowner));
 
         $member = $this->objFromFixture(Member::class, 'default');
-        $this->assertFalse($object->canEdit($member));
+        $this->assertNull($object->canEdit($member));
     }
 
     /**
@@ -73,7 +73,7 @@ class AccordionPanelTest extends SapphireTest
         $this->assertTrue($object->canDelete($siteowner));
 
         $member = $this->objFromFixture(Member::class, 'default');
-        $this->assertFalse($object->canDelete($member));
+        $this->assertNull($object->canDelete($member));
     }
 
     /**

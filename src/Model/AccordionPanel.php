@@ -73,7 +73,7 @@ class AccordionPanel extends BaseElementObject
         $page = null;
 
         if ($this->AccordionID) {
-            if($this->Accordion()->hasMethod('getPage')) {
+            if ($this->Accordion()->hasMethod('getPage')) {
                 $page = $this->Accordion()->getPage();
             }
         }
