@@ -30,7 +30,6 @@ Elemental Blocks will add the following Elements to your site:
 * Call To Action
 * Child Pages
 * Customer Service (Map, directions, contact info)
-* Email Signup (MailChimp, etc)
 * Embeded Code (iFrames, Javascript)
 * Featured Content
 * Image
