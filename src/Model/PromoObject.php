@@ -61,4 +61,20 @@ class PromoObject extends BaseElementObject
 
         return parent::getCMSFields();
     }
+
+    /**
+     * @return null
+     */
+    public function getPage()
+    {
+        $page = null;
+
+        if ($this->ElementPromos()) {
+            if ($this->ElementPromos()->hasMethod('getPage')) {
+                $page = $this->PhotoGallery()->getPage();
+            }
+        }
+
+        return $page;
+    }
 }

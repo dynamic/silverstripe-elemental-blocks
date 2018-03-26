@@ -25,6 +25,22 @@ SilverStripe\Security\Permission:
     Code: Publish_Element
     Type: 1
     Group: =>SilverStripe\Security\Group.site-owners
+  cms-access:
+    Code: CMS_ACCESS
+    Type: 1
+    Group: =>SilverStripe\Security\Group.site-owners
+  sitetree-view:
+    Code: SITETREE_VIEW_ALL
+    Type: 1
+    Group: =>SilverStripe\Security\Group.site-owners
+  sitetree-edit:
+    Code: SITETREE_EDIT_ALL
+    Type: 1
+    Group: =>SilverStripe\Security\Group.site-owners
+  cms-pages:
+    Code: CMS_ACCESS_CMSMain
+    Type: 1
+    Group: =>SilverStripe\Security\Group.site-owners
 
 SilverStripe\Security\Member:
   admin:
@@ -45,6 +61,14 @@ SilverStripe\Security\Member:
     Email: "user"
     Password: "user"
 
+DNADesign\Elemental\Models\ElementalArea:
+  one:
+
+Page:
+  default:
+    Title: 'Demo'
+    ElementalArea: =>DNADesign\Elemental\Models\ElementalArea.one
+
 Dynamic\Elements\Model\AccordionPanel:
   one:
     Name: "Panel One"
@@ -61,6 +85,7 @@ Dynamic\Elements\Elements\ElementAccordion:
     Headline: "Biography sub-head"
     Content: "<p>Biography overview lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>"
     Panels: =>Dynamic\Elements\Model\AccordionPanel.one, =>Dynamic\Elements\Model\AccordionPanel.two
+    Parent: =>DNADesign\Elemental\Models\ElementalArea.one
 
 Dynamic\Elements\Elements\ElementCustomerService:
   one:
@@ -102,3 +127,15 @@ Dynamic\Elements\Elements\ElementOembed:
 Dynamic\Elements\Elements\ElementCallToAction:
   one:
     Title: 'Call To Action'
+
+Dynamic\Elements\Model\GalleryImage:
+  one:
+    Title: "Image One"
+
+Dynamic\Elements\Model\FeatureObject:
+  one:
+    Title: "Feature One"
+
+Dynamic\Elements\Model\PromoObject:
+  one:
+    Title: "Promo One"

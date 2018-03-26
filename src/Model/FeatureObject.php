@@ -66,4 +66,20 @@ class FeatureObject extends BaseElementObject
 
         return parent::getCMSFields();
     }
+
+    /**
+     * @return null
+     */
+    public function getPage()
+    {
+        $page = null;
+
+        if ($this->ElementFeatures()) {
+            if ($this->ElementFeatures()->hasMethod('getPage')) {
+                $page = $this->ElementFeatures()->getPage();
+            }
+        }
+
+        return $page;
+    }
 }

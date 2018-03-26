@@ -64,4 +64,20 @@ class AccordionPanel extends BaseElementObject
 
         return parent::getCMSFields();
     }
+
+    /**
+     * @return null
+     */
+    public function getPage()
+    {
+        $page = null;
+
+        if ($this->AccordionID) {
+            if ($this->Accordion()->hasMethod('getPage')) {
+                $page = $this->Accordion()->getPage();
+            }
+        }
+
+        return $page;
+    }
 }
