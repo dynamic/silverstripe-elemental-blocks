@@ -12,6 +12,6 @@ class LeftAndMainExtension extends Extension
 {
     public function init()
     {
-        Requirements::css('resources/dynamic/silverstripe-elemental-blocks/icons/icons.css');
+        Requirements::css('dynamic/silverstripe-elemental-blocks: icons/icons.css');
     }
 }
