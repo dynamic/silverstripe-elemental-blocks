@@ -5,14 +5,6 @@ Dynamic\Elements\Elements\ElementCustomerService:
   extensions:
     - Dynamic\SilverStripeGeocoder\AddressDataExtension
 
-Dynamic\Elements\Elements\ElementSlideshow:
-  extensions:
-    - Dynamic\FlexSlider\ORM\FlexSlider
-
-Dynamic\FlexSlider\Model\SlideImage:
-  extensions:
-    - Dynamic\Elements\ORM\ElementSlideshowSlideDataExtension
-
 Sheadawson\Linkable\Models\Link:
   templates:
     button: 'Display link as a button'

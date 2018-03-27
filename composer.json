@@ -17,7 +17,6 @@
     ],
     "require": {
         "dnadesign/silverstripe-elemental": "^2@dev",
-        "dynamic/flexslider": "^3.0@dev",
         "dynamic/silverstripe-geocoder": "^1@dev",
         "sheadawson/silverstripe-linkable": "^2.0@dev",
         "silverstripe/recipe-cms": "^1.0@dev",
