@@ -18,6 +18,7 @@ Additional elements for the [SilverStripe Elemental](https://github.com/dnadesig
 
 * SilverStripe ^4.0
 * SilverStripe Elemental ^2.0
+* Silverstripe Geocoder ^1.0
 * SilverStripe Linkable ^2.0
 * Display Logic ^2.0
 
