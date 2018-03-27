@@ -1,6 +1,6 @@
 # SilverStripe Elemental Blocks
 
-Additional elements for the SilverStripe Elemental module
+Additional elements for the [SilverStripe Elemental](https://github.com/dnadesign/silverstripe-elemental) module.
 
 [![Build Status](https://travis-ci.org/dynamic/silverstripe-elemental-blocks.svg?branch=master)](https://travis-ci.org/dynamic/silverstripe-elemental-blocks)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/dynamic/silverstripe-elemental-blocks/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/dynamic/silverstripe-elemental-blocks/?branch=master)
@@ -16,7 +16,10 @@ Additional elements for the SilverStripe Elemental module
 
 ## Requirements
 
-- SilverStripe 4.0
+* SilverStripe ^4.0
+* SilverStripe Elemental ^2.0
+* SilverStripe Linkable ^2.0
+* Display Logic ^2.0
 
 ## Installation
 
@@ -26,16 +29,26 @@ Additional elements for the SilverStripe Elemental module
 
 Elemental Blocks will add the following Elements to your site:
 
-* Accordion
-* Call To Action
-* Child Pages
-* Customer Service (Map, directions, contact info)
-* Embeded Code (iFrames, Javascript)
-* Featured Content
-* Image
-* oEmbed (YouTube, Sound Cloud, etc)
-* Photo Gallery
-* Promos
-* Section Navigation
-* Slideshow
+* Accordion (collapsable panels)
+* Call To Action (button link)
+* Customer Service (map, directions, contact info)
+* Embeded Code (iframes, javascript)
+* Featured Content (large image, headline, description, link)
+* Image (single image)
+* oEmbed (YouTube, SoundCloud, etc)
+* Photo Gallery (thumbnails, lightbox)
+* Promos (small image, headline, description, link)
+* Section Navigation (child pages / pages in current level)
 
+## Getting more elements
+
+Other elemental modules by Dynamic:
+
+* [SilverStripe Elemental Flexslider](https://github.com/dynamic/silverstripe-elemental-flexslider)  
+* [SilverStripe Elemental Blog](https://github.com/dynamic/silverstripe-elemental-blog)  
+* [SilverStripe Elemental Sponsors](https://github.com/dynamic/silverstripe-elemental-sponsors)  
+* [SilverStripe Elemental Testimonials](https://github.com/dynamic/silverstripe-elemental-testimonials) 
+
+## Configuration
+
+See [SilverStripe Elemental Configuration](https://github.com/dnadesign/silverstripe-elemental#configuration)
