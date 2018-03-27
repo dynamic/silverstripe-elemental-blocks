@@ -1,7 +1,37 @@
 # Change Log
 
-## [2.0.0-beta1](https://github.com/dynamic/silverstripe-elemental-blocks/tree/2.0.0-beta1) (2018-01-13)
-[Full Changelog](https://github.com/dynamic/silverstripe-elemental-blocks/compare/2.0.0-alpha1...2.0.0-beta1)
+## [2.0.0-alpha3](https://github.com/dynamic/silverstripe-elemental-blocks/tree/HEAD)
+
+[Full Changelog](https://github.com/dynamic/silverstripe-elemental-blocks/compare/2.0.0-alpha2...HEAD)
+
+**Fixed bugs:**
+
+- Quick Add New doesn't seem to be working in all cases [\#72](https://github.com/dynamic/silverstripe-elemental-blocks/issues/72)
+
+**Closed issues:**
+
+- ElementChildPages - remove in favor of SectionNavigation [\#81](https://github.com/dynamic/silverstripe-elemental-blocks/issues/81)
+- REFACTOR remove link existing for element GridField [\#73](https://github.com/dynamic/silverstripe-elemental-blocks/issues/73)
+
+**Merged pull requests:**
+
+- README - requires Geocoder [\#83](https://github.com/dynamic/silverstripe-elemental-blocks/pull/83) ([jsirish](https://github.com/jsirish))
+- refactor - remove ElementChildPages [\#82](https://github.com/dynamic/silverstripe-elemental-blocks/pull/82) ([jsirish](https://github.com/jsirish))
+- README updates [\#80](https://github.com/dynamic/silverstripe-elemental-blocks/pull/80) ([jsirish](https://github.com/jsirish))
+- refactor - migrate Slideshow to separate module [\#79](https://github.com/dynamic/silverstripe-elemental-blocks/pull/79) ([jsirish](https://github.com/jsirish))
+- GalleryImage - remove Link field [\#78](https://github.com/dynamic/silverstripe-elemental-blocks/pull/78) ([jsirish](https://github.com/jsirish))
+- Fixed hard path to icon.css [\#77](https://github.com/dynamic/silverstripe-elemental-blocks/pull/77) ([mak001](https://github.com/mak001))
+- refactor - remove ElementEmailSignup [\#76](https://github.com/dynamic/silverstripe-elemental-blocks/pull/76) ([jsirish](https://github.com/jsirish))
+- BaseElementObject - refactor permissions [\#75](https://github.com/dynamic/silverstripe-elemental-blocks/pull/75) ([jsirish](https://github.com/jsirish))
+- update requirement for display logic [\#74](https://github.com/dynamic/silverstripe-elemental-blocks/pull/74) ([jsirish](https://github.com/jsirish))
+- Basic countdown element [\#68](https://github.com/dynamic/silverstripe-elemental-blocks/pull/68) ([mak001](https://github.com/mak001))
+
+## [2.0.0-alpha2](https://github.com/dynamic/silverstripe-elemental-blocks/tree/2.0.0-alpha2) (2018-02-02)
+[Full Changelog](https://github.com/dynamic/silverstripe-elemental-blocks/compare/2.0.0-alpha1...2.0.0-alpha2)
+
+**Implemented enhancements:**
+
+- Missing blocks [\#34](https://github.com/dynamic/silverstripe-elemental-blocks/issues/34)
 
 **Closed issues:**
 
@@ -9,9 +39,13 @@
 
 **Merged pull requests:**
 
+- ElementPermissions [\#71](https://github.com/dynamic/silverstripe-elemental-blocks/pull/71) ([jsirish](https://github.com/jsirish))
+- refactor - don’t apply ElementContentDataExtension by default [\#69](https://github.com/dynamic/silverstripe-elemental-blocks/pull/69) ([jsirish](https://github.com/jsirish))
+- changelog - initial [\#66](https://github.com/dynamic/silverstripe-elemental-blocks/pull/66) ([jsirish](https://github.com/jsirish))
 - README - remove links to docs/en/index.md [\#65](https://github.com/dynamic/silverstripe-elemental-blocks/pull/65) ([jsirish](https://github.com/jsirish))
 - composer - remove elemental-blocks requirement [\#64](https://github.com/dynamic/silverstripe-elemental-blocks/pull/64) ([jsirish](https://github.com/jsirish))
 - poser badges [\#63](https://github.com/dynamic/silverstripe-elemental-blocks/pull/63) ([jsirish](https://github.com/jsirish))
+- Added customer service element [\#57](https://github.com/dynamic/silverstripe-elemental-blocks/pull/57) ([mak001](https://github.com/mak001))
 
 ## [2.0.0-alpha1](https://github.com/dynamic/silverstripe-elemental-blocks/tree/2.0.0-alpha1) (2018-01-14)
 **Implemented enhancements:**
