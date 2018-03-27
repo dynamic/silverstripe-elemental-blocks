@@ -59,7 +59,7 @@ class ElementPhotoGallery extends BaseElement
             $config->removeComponentsByType(GridFieldDeleteAction::class);
             $config->addComponent(new GridFieldDeleteAction(false));
             $imagesField = GridField::create('Images', 'Images', $this->Images()->sort('SortOrder'), $config);
-            $fields->addFieldToTab('Root.Photos', $imagesField);
+            $fields->addFieldToTab('Root.Main', $imagesField);
         }
 
         return $fields;
