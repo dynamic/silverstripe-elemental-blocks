@@ -107,15 +107,6 @@ Dynamic\Elements\Elements\ElementPromos:
     Title: "Promos Element One"
     Promos: =>Dynamic\Elements\Model\PromoObject.one, =>Dynamic\Elements\Model\PromoObject.two
 
-Dynamic\FlexSlider\Model\SlideImage:
-  default:
-    Name: "Slide One"
-
-Dynamic\Elements\Elements\ElementSlideshow:
-  one:
-    Title: 'Slideshow'
-    Slides: =>Dynamic\FlexSlider\Model\SlideImage.default
-
 DNADesign\Elemental\Models\ElementContent:
   default:
     Title: 'Content'
