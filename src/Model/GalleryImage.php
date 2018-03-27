@@ -76,6 +76,7 @@ class GalleryImage extends BaseElementObject
         $fields->removeByName(array(
             'SortOrder',
             'PhotoGalleryID',
+            'ElementLinkID',
         ));
         $image = $fields->dataFieldByName('Image')->setFolderName('Uploads/Elements/PhotoGallery/');
         $fields->insertBefore($image, 'Content');
