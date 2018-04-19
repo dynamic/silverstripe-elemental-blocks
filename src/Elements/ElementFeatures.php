@@ -70,7 +70,6 @@ class ElementFeatures extends BaseElement
                 $config->addComponent(new GridFieldOrderableRows());
                 $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
                 $config->removeComponentsByType(GridFieldDeleteAction::class);
-                $config->addComponent(new GridFieldDeleteAction(false));
             }
         });
 

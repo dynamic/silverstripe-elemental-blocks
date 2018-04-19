@@ -57,7 +57,6 @@ class ElementPhotoGallery extends BaseElement
             $config->addComponent(new GridFieldOrderableRows('SortOrder'));
             $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
             $config->removeComponentsByType(GridFieldDeleteAction::class);
-            $config->addComponent(new GridFieldDeleteAction(false));
             $imagesField = GridField::create('Images', 'Images', $this->Images()->sort('SortOrder'), $config);
             $fields->addFieldToTab('Root.Main', $imagesField);
         }

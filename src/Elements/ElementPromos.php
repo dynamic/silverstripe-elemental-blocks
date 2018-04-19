@@ -80,7 +80,7 @@ class ElementPromos extends BaseElement
                 $config->addComponent(new GridFieldOrderableRows('SortOrder'));
                 $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
                 $config->addComponent(new GridFieldAddExistingSearchButton());
-
+                $config->removeComponentsByType(GridFieldDeleteAction::class);
                 $fields->addFieldsToTab('Root.Promos', array(
                     $promoField,
                 ));

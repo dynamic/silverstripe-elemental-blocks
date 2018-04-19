@@ -76,7 +76,6 @@ class ElementAccordion extends BaseElement
                 $config->addComponent(new GridFieldOrderableRows('Sort'));
                 $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
                 $config->removeComponentsByType(GridFieldDeleteAction::class);
-                $config->addComponent(new GridFieldDeleteAction(false));
             }
         });
 
