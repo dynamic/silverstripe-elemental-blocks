@@ -69,24 +69,6 @@ Page:
     Title: 'Demo'
     ElementalArea: =>DNADesign\Elemental\Models\ElementalArea.one
 
-Dynamic\Elements\Model\AccordionPanel:
-  one:
-    Name: "Panel One"
-    Title: "Panel One"
-    Content: "<p>Hello World</p>"
-  two:
-    Name: "Panel Two"
-    Title: "Panel Two"
-    Content: "<p>How are ya?</p>"
-
-Dynamic\Elements\Elements\ElementAccordion:
-  one:
-    Title: "Accordion"
-    Headline: "Biography sub-head"
-    Content: "<p>Biography overview lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>"
-    Panels: =>Dynamic\Elements\Model\AccordionPanel.one, =>Dynamic\Elements\Model\AccordionPanel.two
-    Parent: =>DNADesign\Elemental\Models\ElementalArea.one
-
 Dynamic\Elements\Elements\ElementCustomerService:
   one:
     Title: "Customer Service"
