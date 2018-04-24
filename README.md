@@ -30,7 +30,6 @@ Additional elements for the [SilverStripe Elemental](https://github.com/dnadesig
 
 Elemental Blocks will add the following Elements to your site:
 
-* Accordion (collapsable panels)
 * Call To Action (button link)
 * Customer Service (map, directions, contact info)
 * Embeded Code (iframes, javascript)
@@ -45,6 +44,7 @@ Elemental Blocks will add the following Elements to your site:
 
 Other elemental modules by Dynamic:
 
+* [SilverStripe Elemental Accordion Block](https://github.com/dynamic/silverstripe-elemental-acordion)
 * [SilverStripe Elemental Flexslider](https://github.com/dynamic/silverstripe-elemental-flexslider)  
 * [SilverStripe Elemental Blog](https://github.com/dynamic/silverstripe-elemental-blog)  
 * [SilverStripe Elemental Sponsors](https://github.com/dynamic/silverstripe-elemental-sponsors)  
