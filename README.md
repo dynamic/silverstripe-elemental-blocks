@@ -45,6 +45,7 @@ Elemental Blocks will add the following Elements to your site:
 Other elemental modules by Dynamic:
 
 * [SilverStripe Elemental Accordion Block](https://github.com/dynamic/silverstripe-elemental-acordion)
+* [SilverStripe Elemental Count Down Block](https://github.com/dynamic/silverstripe-elemental-countdown)
 * [SilverStripe Elemental Flexslider](https://github.com/dynamic/silverstripe-elemental-flexslider)  
 * [SilverStripe Elemental Blog](https://github.com/dynamic/silverstripe-elemental-blog)  
 * [SilverStripe Elemental Sponsors](https://github.com/dynamic/silverstripe-elemental-sponsors)  
