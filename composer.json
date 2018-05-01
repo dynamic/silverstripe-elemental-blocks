@@ -18,7 +18,7 @@
     "require": {
         "dnadesign/silverstripe-elemental": "^2@dev",
         "dynamic/silverstripe-geocoder": "^1@dev",
-        "sheadawson/silverstripe-linkable": "^2.0@dev",
+        "dynamic/silverstripe-elemental-baseobject": "^1@dev",
         "silverstripe/recipe-cms": "^1.0@dev",
         "silverstripe/vendor-plugin": "^1.0@dev",
         "unclecheese/display-logic": "^2.0@dev"

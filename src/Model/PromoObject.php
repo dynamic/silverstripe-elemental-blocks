@@ -2,6 +2,7 @@
 
 namespace Dynamic\Elements\Model;
 
+use Dynamic\BaseObject\Model\BaseElementObject;
 use Dynamic\Elements\Elements\ElementPromos;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
