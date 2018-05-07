@@ -2,6 +2,7 @@
 
 namespace Dynamic\Elements\Model;
 
+use Dynamic\BaseObject\Model\BaseElementObject;
 use Dynamic\Elements\Elements\ElementPhotoGallery;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
