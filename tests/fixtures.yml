@@ -93,10 +93,6 @@ DNADesign\Elemental\Models\ElementContent:
   default:
     Title: 'Content'
 
-Dynamic\Elements\Model\GalleryImage:
-  one:
-    Title: "Image One"
-
 Dynamic\Elements\Model\FeatureObject:
   one:
     Title: "Feature One"
