@@ -9,22 +9,6 @@ SilverStripe\Security\Permission:
     Code: ADMIN
     Type: 1
     Group: =>SilverStripe\Security\Group.administrators
-  element-create:
-    Code: Create_Element
-    Type: 1
-    Group: =>SilverStripe\Security\Group.site-owners
-  element-edit:
-    Code: Edit_Element
-    Type: 1
-    Group: =>SilverStripe\Security\Group.site-owners
-  element-delete:
-    Code: Delete_Element
-    Type: 1
-    Group: =>SilverStripe\Security\Group.site-owners
-  element-publish:
-    Code: Publish_Element
-    Type: 1
-    Group: =>SilverStripe\Security\Group.site-owners
   cms-access:
     Code: CMS_ACCESS
     Type: 1
@@ -78,17 +62,6 @@ Dynamic\Elements\Elements\ElementFeatures:
     Title: "Intro"
     Content: "<p>Page introduction lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>"
 
-Dynamic\Elements\Model\PromoObject:
-  one:
-    Title: "Promo One"
-  two:
-    Title: "Promo Two"
-
-Dynamic\Elements\Elements\ElementPromos:
-  one:
-    Title: "Promos Element One"
-    Promos: =>Dynamic\Elements\Model\PromoObject.one, =>Dynamic\Elements\Model\PromoObject.two
-
 DNADesign\Elemental\Models\ElementContent:
   default:
     Title: 'Content'
@@ -96,7 +69,3 @@ DNADesign\Elemental\Models\ElementContent:
 Dynamic\Elements\Model\FeatureObject:
   one:
     Title: "Feature One"
-
-Dynamic\Elements\Model\PromoObject:
-  one:
-    Title: "Promo One"
