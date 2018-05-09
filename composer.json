@@ -1,7 +1,7 @@
 {
     "name": "dynamic/silverstripe-elemental-blocks",
     "type": "silverstripe-recipe",
-    "description": "A recipe to require addiitonal elements for the SilverStripe Elemental module",
+    "description": "A recipe to require additonal elements for the SilverStripe Elemental module",
     "keywords": [
         "silverstripe",
         "elemental",
