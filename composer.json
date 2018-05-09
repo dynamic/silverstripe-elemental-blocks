@@ -1,11 +1,12 @@
 {
     "name": "dynamic/silverstripe-elemental-blocks",
-    "type": "silverstripe-vendormodule",
-    "description": "Additional elements for the SilverStripe Elemental module",
+    "type": "silverstripe-recipe",
+    "description": "A recipe to require additonal elements for the SilverStripe Elemental module",
     "keywords": [
         "silverstripe",
         "elemental",
-        "blocks"
+        "blocks",
+        "recipe"
     ],
     "license": "BSD-3-Clause",
     "authors": [
@@ -17,11 +18,22 @@
     ],
     "require": {
         "dnadesign/silverstripe-elemental": "^2@dev",
-        "dynamic/silverstripe-geocoder": "^1@dev",
-        "dynamic/silverstripe-elemental-baseobject": "^1@dev",
+        "dynamic/silverstripe-elemental-accordion-block": "^1.0@dev",
+        "dynamic/silverstripe-elemental-blog": "^1.0@dev",
+        "dynamic/silverstripe-elemental-countdown-block": "^1.0@dev",
+        "dynamic/silverstripe-elemental-customer-service": "^1.0@dev",
+        "dynamic/silverstripe-elemental-embedded-code": "^1.0@dev",
+        "dynamic/silverstripe-elemental-features": "^1.0@dev",
+        "dynamic/silverstripe-elemental-flexslider": "^1.0@dev",
+        "dynamic/silverstripe-elemental-gallery": "^1.0@dev",
+        "dynamic/silverstripe-elemental-image": "^1.0@dev",
+        "dynamic/silverstripe-elemental-oembed": "^1.0@dev",
+        "dynamic/silverstripe-elemental-promos": "^1.0@dev",
+        "dynamic/silverstripe-elemental-section-navigation": "^1.0@dev",
+        "dynamic/silverstripe-elemental-sponsors": "^1.0@dev",
+        "dynamic/silverstripe-elemental-testimonials": "^1.0@dev",
         "silverstripe/recipe-cms": "^1.0@dev",
-        "silverstripe/vendor-plugin": "^1.0@dev",
-        "unclecheese/display-logic": "^2.0@dev"
+        "silverstripe/recipe-plugin": "^1"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7",
@@ -39,16 +51,6 @@
             "dev-master": "2.0.x-dev"
         }
     },
-    "autoload": {
-        "psr-4": {
-            "Dynamic\\Elements\\": "src/",
-            "Dynamic\\Elements\\Tests\\": "tests/"
-        }
-    },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "scripts": {
-        "lint": "vendor/bin/phpcs src/ tests/",
-        "lint-clean": "vendor/bin/phpcbf src/ tests/"
-    }
+    "prefer-stable": true
 }
