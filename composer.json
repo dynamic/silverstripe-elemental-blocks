@@ -20,7 +20,7 @@
         "dnadesign/silverstripe-elemental": "^2@dev",
         "dynamic/silverstripe-elemental-accordion": "^1.0@dev",
         "dynamic/silverstripe-elemental-blog": "^1.0@dev",
-        "dynamic/silverstripe-elemental-countdown-block": "^1.0@dev",
+        "dynamic/silverstripe-elemental-countdown": "^1.0@dev",
         "dynamic/silverstripe-elemental-customer-service": "^1.0@dev",
         "dynamic/silverstripe-elemental-embedded-code": "^1.0@dev",
         "dynamic/silverstripe-elemental-features": "^1.0@dev",
