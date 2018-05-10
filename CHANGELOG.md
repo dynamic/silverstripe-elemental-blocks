@@ -1,8 +1,38 @@
 # Change Log
 
-## [2.0.0-alpha3](https://github.com/dynamic/silverstripe-elemental-blocks/tree/HEAD)
+## [2.0.0-alpha5](https://github.com/dynamic/silverstripe-elemental-blocks/tree/2.0.0-alpha5) (2018-05-10)
+[Full Changelog](https://github.com/dynamic/silverstripe-elemental-blocks/compare/2.0.0-alpha4...2.0.0-alpha5)
 
-[Full Changelog](https://github.com/dynamic/silverstripe-elemental-blocks/compare/2.0.0-alpha2...HEAD)
+**Implemented enhancements:**
+
+- QuickAddNew [\#41](https://github.com/dynamic/silverstripe-elemental-blocks/issues/41)
+
+**Merged pull requests:**
+
+- composer - update accordion block name [\#100](https://github.com/dynamic/silverstripe-elemental-blocks/pull/100) ([jsirish](https://github.com/jsirish))
+- refactor - convert to recipe [\#99](https://github.com/dynamic/silverstripe-elemental-blocks/pull/99) ([jsirish](https://github.com/jsirish))
+- refactor - migrate section navigation [\#98](https://github.com/dynamic/silverstripe-elemental-blocks/pull/98) ([jsirish](https://github.com/jsirish))
+- refactor - migrate Customer Service [\#97](https://github.com/dynamic/silverstripe-elemental-blocks/pull/97) ([jsirish](https://github.com/jsirish))
+- refactor - migrate Embedded Code [\#96](https://github.com/dynamic/silverstripe-elemental-blocks/pull/96) ([jsirish](https://github.com/jsirish))
+- refactor - migrate Features [\#95](https://github.com/dynamic/silverstripe-elemental-blocks/pull/95) ([jsirish](https://github.com/jsirish))
+- refactor - migrate Promos [\#94](https://github.com/dynamic/silverstripe-elemental-blocks/pull/94) ([jsirish](https://github.com/jsirish))
+- refactor -  migrate photo gallery [\#93](https://github.com/dynamic/silverstripe-elemental-blocks/pull/93) ([jsirish](https://github.com/jsirish))
+- refactor - remove Oembed template [\#92](https://github.com/dynamic/silverstripe-elemental-blocks/pull/92) ([jsirish](https://github.com/jsirish))
+- Refactor - remove CallToAction [\#91](https://github.com/dynamic/silverstripe-elemental-blocks/pull/91) ([jsirish](https://github.com/jsirish))
+- refactor - migrate oEmbed block to separate repo [\#90](https://github.com/dynamic/silverstripe-elemental-blocks/pull/90) ([jsirish](https://github.com/jsirish))
+- refactor - migrate BaseElementObject to separate module [\#89](https://github.com/dynamic/silverstripe-elemental-blocks/pull/89) ([jsirish](https://github.com/jsirish))
+- REFACTOR decouple ElementCountDown [\#88](https://github.com/dynamic/silverstripe-elemental-blocks/pull/88) ([muskie9](https://github.com/muskie9))
+- REFACTOR decouple ElementalAccordion [\#87](https://github.com/dynamic/silverstripe-elemental-blocks/pull/87) ([muskie9](https://github.com/muskie9))
+
+## [2.0.0-alpha4](https://github.com/dynamic/silverstripe-elemental-blocks/tree/2.0.0-alpha4) (2018-04-19)
+[Full Changelog](https://github.com/dynamic/silverstripe-elemental-blocks/compare/2.0.0-alpha3...2.0.0-alpha4)
+
+**Merged pull requests:**
+
+- Removed delete button on gridfields [\#85](https://github.com/dynamic/silverstripe-elemental-blocks/pull/85) ([mak001](https://github.com/mak001))
+
+## [2.0.0-alpha3](https://github.com/dynamic/silverstripe-elemental-blocks/tree/2.0.0-alpha3) (2018-03-27)
+[Full Changelog](https://github.com/dynamic/silverstripe-elemental-blocks/compare/2.0.0-alpha2...2.0.0-alpha3)
 
 **Fixed bugs:**
 
@@ -15,6 +45,7 @@
 
 **Merged pull requests:**
 
+- changelog for 2.0.0-alpha3 [\#84](https://github.com/dynamic/silverstripe-elemental-blocks/pull/84) ([jsirish](https://github.com/jsirish))
 - README - requires Geocoder [\#83](https://github.com/dynamic/silverstripe-elemental-blocks/pull/83) ([jsirish](https://github.com/jsirish))
 - refactor - remove ElementChildPages [\#82](https://github.com/dynamic/silverstripe-elemental-blocks/pull/82) ([jsirish](https://github.com/jsirish))
 - README updates [\#80](https://github.com/dynamic/silverstripe-elemental-blocks/pull/80) ([jsirish](https://github.com/jsirish))
