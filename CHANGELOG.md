@@ -1,5 +1,18 @@
 # Change Log
 
+## [2.0.0-beta1](https://github.com/dynamic/silverstripe-elemental-blocks/tree/2.0.0-beta1) (2018-05-11)
+[Full Changelog](https://github.com/dynamic/silverstripe-elemental-blocks/compare/2.0.0-alpha5...2.0.0-beta1)
+
+**Closed issues:**
+
+- REFACTOR break out elements into separate modules [\#86](https://github.com/dynamic/silverstripe-elemental-blocks/issues/86)
+- BaseElementObject not extending Element problematic for sorting [\#70](https://github.com/dynamic/silverstripe-elemental-blocks/issues/70)
+
+**Merged pull requests:**
+
+- bugfix - update Countdown block name [\#103](https://github.com/dynamic/silverstripe-elemental-blocks/pull/103) ([jsirish](https://github.com/jsirish))
+- changelog - 1.0.0-alpha5 [\#101](https://github.com/dynamic/silverstripe-elemental-blocks/pull/101) ([jsirish](https://github.com/jsirish))
+
 ## [2.0.0-alpha5](https://github.com/dynamic/silverstripe-elemental-blocks/tree/2.0.0-alpha5) (2018-05-10)
 [Full Changelog](https://github.com/dynamic/silverstripe-elemental-blocks/compare/2.0.0-alpha4...2.0.0-alpha5)
 
