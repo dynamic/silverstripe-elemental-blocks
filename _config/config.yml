@@ -1,10 +1,6 @@
 ---
 Name: dynamicelementsconfig
 ---
-Dynamic\Elements\Elements\ElementCustomerService:
-  extensions:
-    - Dynamic\SilverStripeGeocoder\AddressDataExtension
-
 Sheadawson\Linkable\Models\Link:
   templates:
     button: 'Display link as a button'
