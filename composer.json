@@ -17,7 +17,7 @@
         }
     ],
     "require": {
-        "dnadesign/silverstripe-elemental": "^2@dev",
+        "dnadesign/silverstripe-elemental": "^2@dev || ^3@dev",
         "dynamic/silverstripe-elemental-accordion": "^1.0@dev",
         "dynamic/silverstripe-elemental-blog": "^1.0@dev",
         "dynamic/silverstripe-elemental-countdown": "^1.0@dev",
@@ -32,7 +32,7 @@
         "dynamic/silverstripe-elemental-section-navigation": "^1.0@dev",
         "dynamic/silverstripe-elemental-sponsors": "^1.0@dev",
         "dynamic/silverstripe-elemental-testimonials": "^1.0@dev",
-        "silverstripe/recipe-cms": "^1.0@dev",
+        "silverstripe/recipe-cms": "^1@dev || ^4@dev",
         "silverstripe/recipe-plugin": "^1"
     },
     "require-dev": {
