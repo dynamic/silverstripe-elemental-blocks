@@ -36,6 +36,7 @@ Elemental Blocks will add the following Elements to your site:
 * [Customer Service](https://github.com/dynamic/silverstripe-elemental-customer-service): map, directions, and contact info for your location
 * [Embeded Code](https://github.com/dynamic/silverstripe-elemental-embedded-code): embed code like iframes, javascript
 * [Featured Content](https://github.com/dynamic/silverstripe-elemental-features): large image, headline, description, link. one per row
+* [File List](https://github.com/dynamic/silverstripe-elemental-filelist): A list of files for download
 * [Flexslider](https://github.com/dynamic/silverstripe-elemental-flexslider): Flexslider slideshow
 * [Gallery](https://github.com/dynamic/silverstripe-elemental-gallery): display a collection of images
 * [Image](https://github.com/dynamic/silverstripe-elemental-image): single image
@@ -44,6 +45,7 @@ Elemental Blocks will add the following Elements to your site:
 * [Recent Blog Posts](https://github.com/dynamic/silverstripe-elemental-blog): list of the most recent posts of a specific blog
 * [Section Navigation](https://github.com/dynamic/silverstripe-elemental-section-navigation): list of child pages or pages in current level
 * [Sponsors](https://github.com/dynamic/silverstripe-elemental-sponsors): sponsor logos in a row
+* [Tab Set](https://github.com/dynamic/silverstripe-elemental-tabset): Create a tabbed interface that uses elements
 * [Testimonials](https://github.com/dynamic/silverstripe-elemental-testimonials): list of customer testimonials, filter by category
 
 ## Configuration
