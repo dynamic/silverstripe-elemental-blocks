@@ -1,15 +1,57 @@
 # Change Log
 
-## [2.0.0-beta1](https://github.com/dynamic/silverstripe-elemental-blocks/tree/2.0.0-beta1) (2018-05-11)
-[Full Changelog](https://github.com/dynamic/silverstripe-elemental-blocks/compare/2.0.0-alpha5...2.0.0-beta1)
-
-**Closed issues:**
-
-- REFACTOR break out elements into separate modules [\#86](https://github.com/dynamic/silverstripe-elemental-blocks/issues/86)
-- BaseElementObject not extending Element problematic for sorting [\#70](https://github.com/dynamic/silverstripe-elemental-blocks/issues/70)
+## [3.0.1](https://github.com/dynamic/silverstripe-elemental-blocks/tree/3.0.1) (2019-03-20)
+[Full Changelog](https://github.com/dynamic/silverstripe-elemental-blocks/compare/3.0.0...3.0.1)
 
 **Merged pull requests:**
 
+- UPDATE requirements to not include @dev [\#111](https://github.com/dynamic/silverstripe-elemental-blocks/pull/111) ([muskie9](https://github.com/muskie9))
+
+## [3.0.0](https://github.com/dynamic/silverstripe-elemental-blocks/tree/3.0.0) (2019-01-20)
+[Full Changelog](https://github.com/dynamic/silverstripe-elemental-blocks/compare/2.0.1...3.0.0)
+
+**Merged pull requests:**
+
+- Refactor/branch alias [\#109](https://github.com/dynamic/silverstripe-elemental-blocks/pull/109) ([jsirish](https://github.com/jsirish))
+
+## [2.0.1](https://github.com/dynamic/silverstripe-elemental-blocks/tree/2.0.1) (2019-01-20)
+[Full Changelog](https://github.com/dynamic/silverstripe-elemental-blocks/compare/2.0.0...2.0.1)
+
+**Merged pull requests:**
+
+- remove branch alias [\#108](https://github.com/dynamic/silverstripe-elemental-blocks/pull/108) ([jsirish](https://github.com/jsirish))
+
+## [2.0.0](https://github.com/dynamic/silverstripe-elemental-blocks/tree/2.0.0) (2018-08-29)
+[Full Changelog](https://github.com/dynamic/silverstripe-elemental-blocks/compare/2.0.0-beta1...2.0.0)
+
+**Closed issues:**
+
+- Reference to legacy ElementCustomerService class [\#105](https://github.com/dynamic/silverstripe-elemental-blocks/issues/105)
+
+**Merged pull requests:**
+
+- allow elemental 3 [\#107](https://github.com/dynamic/silverstripe-elemental-blocks/pull/107) ([jsirish](https://github.com/jsirish))
+- REFACTOR remove legacy ElementCustomerService config [\#106](https://github.com/dynamic/silverstripe-elemental-blocks/pull/106) ([muskie9](https://github.com/muskie9))
+
+## [2.0.0-beta1](https://github.com/dynamic/silverstripe-elemental-blocks/tree/2.0.0-beta1) (2018-05-11)
+[Full Changelog](https://github.com/dynamic/silverstripe-elemental-blocks/compare/2.0.0-alpha5...2.0.0-beta1)
+
+**Implemented enhancements:**
+
+- Add icons for gridfield [\#40](https://github.com/dynamic/silverstripe-elemental-blocks/issues/40)
+- ElementBlogPosts - don't require Blog in composer [\#20](https://github.com/dynamic/silverstripe-elemental-blocks/issues/20)
+- ElementAccordion.ss - functional JS for base template [\#17](https://github.com/dynamic/silverstripe-elemental-blocks/issues/17)
+
+**Closed issues:**
+
+- BaseElementObject not extending Element problematic for sorting [\#70](https://github.com/dynamic/silverstripe-elemental-blocks/issues/70)
+- REFACTOR break out elements into separate modules [\#86](https://github.com/dynamic/silverstripe-elemental-blocks/issues/86)
+- ElementChildPages - remove in favor of SectionNavigation [\#81](https://github.com/dynamic/silverstripe-elemental-blocks/issues/81)
+- Switch link fields back to Linkable [\#51](https://github.com/dynamic/silverstripe-elemental-blocks/issues/51)
+
+**Merged pull requests:**
+
+- release 2.0.0-beta1 [\#104](https://github.com/dynamic/silverstripe-elemental-blocks/pull/104) ([jsirish](https://github.com/jsirish))
 - bugfix - update Countdown block name [\#103](https://github.com/dynamic/silverstripe-elemental-blocks/pull/103) ([jsirish](https://github.com/jsirish))
 - changelog - 1.0.0-alpha5 [\#101](https://github.com/dynamic/silverstripe-elemental-blocks/pull/101) ([jsirish](https://github.com/jsirish))
 
@@ -53,7 +95,6 @@
 
 **Closed issues:**
 
-- ElementChildPages - remove in favor of SectionNavigation [\#81](https://github.com/dynamic/silverstripe-elemental-blocks/issues/81)
 - REFACTOR remove link existing for element GridField [\#73](https://github.com/dynamic/silverstripe-elemental-blocks/issues/73)
 
 **Merged pull requests:**
@@ -94,14 +135,11 @@
 ## [2.0.0-alpha1](https://github.com/dynamic/silverstripe-elemental-blocks/tree/2.0.0-alpha1) (2018-01-14)
 **Implemented enhancements:**
 
-- Add icons for gridfield [\#40](https://github.com/dynamic/silverstripe-elemental-blocks/issues/40)
 - Content Block additions [\#38](https://github.com/dynamic/silverstripe-elemental-blocks/issues/38)
 - Features Block alternating rows option [\#37](https://github.com/dynamic/silverstripe-elemental-blocks/issues/37)
 - Headlines for ElementAreas in CMS [\#36](https://github.com/dynamic/silverstripe-elemental-blocks/issues/36)
 - Photo Gallery Block updates [\#35](https://github.com/dynamic/silverstripe-elemental-blocks/issues/35)
 - PageLink decode json [\#30](https://github.com/dynamic/silverstripe-elemental-blocks/issues/30)
-- ElementBlogPosts - don't require Blog in composer [\#20](https://github.com/dynamic/silverstripe-elemental-blocks/issues/20)
-- ElementAccordion.ss - functional JS for base template [\#17](https://github.com/dynamic/silverstripe-elemental-blocks/issues/17)
 - Elements with supporting DataObjects - make the object interface more consistant [\#14](https://github.com/dynamic/silverstripe-elemental-blocks/issues/14)
 - Element DataObjects - standardarize the name/title/headline DB fields [\#13](https://github.com/dynamic/silverstripe-elemental-blocks/issues/13)
 - Element DataObjects - add ability to link [\#12](https://github.com/dynamic/silverstripe-elemental-blocks/issues/12)
@@ -116,7 +154,6 @@
 
 **Closed issues:**
 
-- Switch link fields back to Linkable [\#51](https://github.com/dynamic/silverstripe-elemental-blocks/issues/51)
 - New Accordion Panel - Save and Publish browser error [\#33](https://github.com/dynamic/silverstripe-elemental-blocks/issues/33)
 - UPDATE add database name config in DataObject descendants [\#26](https://github.com/dynamic/silverstripe-elemental-blocks/issues/26)
 
