@@ -1,7 +1,7 @@
 {
     "name": "dynamic/silverstripe-elemental-blocks",
     "type": "silverstripe-recipe",
-    "description": "A recipe to require additonal elements for the SilverStripe Elemental module",
+    "description": "A recipe to require additional elements for the SilverStripe Elemental module",
     "keywords": [
         "silverstripe",
         "elemental",
@@ -17,29 +17,26 @@
         }
     ],
     "require": {
-        "dnadesign/silverstripe-elemental": "^4@dev",
-        "dynamic/silverstripe-elemental-accordion": "^2@dev",
-        "dynamic/silverstripe-elemental-baseobject": "^2@dev",
-        "dynamic/silverstripe-elemental-blog": "^2@dev",
-        "dynamic/silverstripe-elemental-countdown": "^2@dev",
-        "dynamic/silverstripe-elemental-customer-service": "^2@dev",
-        "dynamic/silverstripe-elemental-embedded-code": "^2@dev",
-        "dynamic/silverstripe-elemental-features": "^2@dev",
-        "dynamic/silverstripe-elemental-filelist": "^2@dev",
-        "dynamic/silverstripe-elemental-flexslider": "^2@dev",
-        "dynamic/silverstripe-elemental-gallery": "^2@dev",
-        "dynamic/silverstripe-elemental-image": "^2@dev",
-        "dynamic/silverstripe-elemental-oembed": "^2@dev",
-        "dynamic/silverstripe-elemental-promos": "^2@dev",
-        "dynamic/silverstripe-elemental-section-navigation": "^2@dev",
-        "dynamic/silverstripe-elemental-sponsors": "^2@dev",
-        "dynamic/silverstripe-elemental-tabset": "^2@dev",
-        "dynamic/silverstripe-elemental-testimonials": "^2@dev",
-        "silverstripe/recipe-cms": "^4@dev",
-        "silverstripe/recipe-plugin": "^1"
+        "dynamic/silverstripe-elemental-accordion": "^2.0",
+        "dynamic/silverstripe-elemental-baseobject": "^2.0",
+        "dynamic/silverstripe-elemental-blog": "^2.0",
+        "dynamic/silverstripe-elemental-countdown": "^2.0",
+        "dynamic/silverstripe-elemental-customer-service": "^2.0",
+        "dynamic/silverstripe-elemental-embedded-code": "^2.0",
+        "dynamic/silverstripe-elemental-features": "^2.0",
+        "dynamic/silverstripe-elemental-filelist": "^2.0",
+        "dynamic/silverstripe-elemental-flexslider": "^2.0",
+        "dynamic/silverstripe-elemental-gallery": "^2.0",
+        "dynamic/silverstripe-elemental-image": "^2.0",
+        "dynamic/silverstripe-elemental-oembed": "^2.0",
+        "dynamic/silverstripe-elemental-promos": "^2.0",
+        "dynamic/silverstripe-elemental-section-navigation": "^2.0",
+        "dynamic/silverstripe-elemental-sponsors": "^2.0",
+        "dynamic/silverstripe-elemental-tabset": "^2.0",
+        "dynamic/silverstripe-elemental-testimonials": "^2.0"
     },
     "require-dev": {
-        "phpunit/PHPUnit": "^5.7",
+        "phpunit/phpunit": "^5.7",
         "squizlabs/php_codesniffer": "*"
     },
     "config": {
