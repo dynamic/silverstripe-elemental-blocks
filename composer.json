@@ -1,14 +1,15 @@
 {
     "name": "dynamic/silverstripe-elemental-blocks",
-    "type": "silverstripe-recipe",
     "description": "A recipe to require additional elements for the SilverStripe Elemental module",
+    "license": "BSD-3-Clause",
+    "type": "silverstripe-recipe",
+    "abandoned": "dynamic/recipe-silverstripe-elemental-base-site",
     "keywords": [
         "silverstripe",
         "elemental",
         "blocks",
         "recipe"
     ],
-    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "Dynamic",
@@ -39,18 +40,18 @@
         "phpunit/phpunit": "^5.7",
         "squizlabs/php_codesniffer": "*"
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "config": {
         "process-timeout": 600
     },
     "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        },
         "expose": [
             "thirdparty",
             "icons"
-        ],
-        "branch-alias": {
-            "dev-master": "3.0.x-dev"
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+        ]
+    }
 }
