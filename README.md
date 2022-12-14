@@ -2,16 +2,15 @@
 
 Additional elements for the [SilverStripe Elemental](https://github.com/dnadesign/silverstripe-elemental) module.
 
-[![Latest Stable Version](https://poser.pugx.org/dynamic/silverstripe-elemental-blocks/v/stable)](https://packagist.org/packages/dynamic/silverstripe-elemental-blocks)
-[![Total Downloads](https://poser.pugx.org/dynamic/silverstripe-elemental-blocks/downloads)](https://packagist.org/packages/dynamic/silverstripe-elemental-blocks)
-[![Latest Unstable Version](https://poser.pugx.org/dynamic/silverstripe-elemental-blocks/v/unstable)](https://packagist.org/packages/dynamic/silverstripe-elemental-blocks)
-[![License](https://poser.pugx.org/dynamic/silverstripe-elemental-blocks/license)](https://packagist.org/packages/dynamic/silverstripe-elemental-blocks)
+This module is no longer maintained. Please checkout the following alternatives:
 
+* [dynamic/recipe-silverstripe-elemental-base-site](https://github.com/dynamic/recipe-silverstripe-elemental-base-site)
+* [Elemental modules by Dynamic](https://github.com/orgs/dynamic/repositories?q=elemental&type=all&language=&sort=)
 
 ## Requirements
 
-- silverstripe/recipe-cms: ^4@dev
-- dnadesign/silverstripe-elemental: ^4@dev
+- silverstripe/recipe-cms: ^4.0
+- dnadesign/silverstripe-elemental: ^4.0
 
 ## Usage
 
