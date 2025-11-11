@@ -17,6 +17,12 @@
             "homepage": "http://www.dynamicagency.com"
         }
     ],
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/dynamic"
+        }
+    ],
     "require": {
         "dynamic/silverstripe-elemental-accordion": "^2.0",
         "dynamic/silverstripe-elemental-baseobject": "^2.0",

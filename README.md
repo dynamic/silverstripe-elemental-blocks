@@ -1,5 +1,7 @@
 # SilverStripe Elemental Blocks Recipe
 
+[![Sponsors](https://img.shields.io/badge/GitHub-Sponsors-ff69b4?logo=github)](https://github.com/sponsors/dynamic)
+
 Additional elements for the [SilverStripe Elemental](https://github.com/dnadesign/silverstripe-elemental) module.
 
 This module is no longer maintained. Please checkout the following alternatives:
